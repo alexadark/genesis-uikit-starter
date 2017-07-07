@@ -111,11 +111,19 @@ function wst_add_theme_supports() {
 		),
 		'custom-background'               => null,
 		'genesis-after-entry-widget-area' => null,
-		'genesis-footer-widgets'          => 3,
+		'genesis-footer-widgets'          => 4,
 		'genesis-menus'                   => array(
 			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
 			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )
 		),
+		'genesis-structural-wraps' => array(
+			'header',
+			'nav',
+			'subnav',
+			'site-inner',
+			'footer-widgets',
+			'footer'
+		)
 	);
 
 	foreach ( $config as $feature => $args ) {

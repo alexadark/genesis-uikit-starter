@@ -17,12 +17,19 @@ function wst_enqueue_scripts_styles() {
 	wp_enqueue_style( 'dashicons' );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( CHILD_TEXT_DOMAIN.'-responsive-menu', CHILD_URL . "responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+
+	wp_register_script('uikit-js',get_stylesheet_directory_uri(). '/assets/js/uikit/min/uikit-min.js', array('jquery'), '2.27.2', true);
+	wp_enqueue_script('uikit-js');
+	wp_register_script('uikit-comps-js',get_stylesheet_directory_uri(). '/assets/js/uikit/min/uikit-comps-min.js', array('uikit-js'),
+		'1', true);
+	wp_enqueue_script('uikit-comps-js');
+	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/assets/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_localize_script(
-		CHILD_TEXT_DOMAIN.'-responsive-menu',
+		'genesis-sample-responsive-menu',
 		'genesis_responsive_menu',
 		wst_responsive_menu_settings()
 	);
+
 
 }
 
@@ -35,10 +42,11 @@ function wst_enqueue_scripts_styles() {
  */
 function wst_responsive_menu_settings() {
 
+
 	$settings = array(
-		'mainMenu'          => __( 'Menu', CHILD_TEXT_DOMAIN ),
+		'mainMenu'          => __( 'Menu', 'genesis-sample' ),
 		'menuIconClass'     => 'dashicons-before dashicons-menu',
-		'subMenu'           => __( 'Submenu', CHILD_TEXT_DOMAIN ),
+		'subMenu'           => __( 'Submenu', 'genesis-sample' ),
 		'subMenuIconsClass' => 'dashicons-before dashicons-arrow-down-alt2',
 		'menuClasses'       => array(
 			'combine' => array(
@@ -50,5 +58,4 @@ function wst_responsive_menu_settings() {
 	);
 
 	return $settings;
-
 }

@@ -1,27 +1,76 @@
-// Base Colors
-//===================
-$white: #fff;
+// Typography
+$sans-serif: helvetica, arial;
+$serif: georgia;
+$base-font-family: "source sans pro", $sans-serif;
+$header-font-family: "source sans pro",$sans-serif;
+
+// Sizes
+$base-font-size: rem(18);
+$base-line-height: $base-font-size * 1.5;
+$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+$header-line-height: $base-font-size * 1.25;
+$base-border-radius: rem(3);
+
+// Colors
+$white:#fff;
 $black: #000;
-$accent-color: #c3251d;
-$gray-lightest: #ccc;
-$gray-lighter: #eee;
-$gray-light: #ddd;
-$gray-medium: #777;
-$gray: #333;
+$light: #f5f5f5;
+$gray:#777;
+$light-gray: #DDD;
+$medium-gray: #999;
+$dark-gray: #333;
+$blue: #2980b9;
+$red: #e5554e;
+$dark-blue: #34495e;
 
-//
 
-//
-// Device Screen Sizes
-//==========================
 
-$mobile-small: 320px;
+
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+//Transitions
+
+
+
+// Background Color
+$base-background-color: $light;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $red;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15%);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+
 $mobile: 480px;
-$tablet-portrait: 860px;
-$tablet-landscape: 1024px;
-$desktop: 1200px;
-$desktop-larger: 1340px;
-$desktop-huge: 1600px;
+$tablet: 800px;
+$laptop: 960px;
+$desktop:1200px;
 
 //
 // Component: Variables
@@ -37,28 +86,28 @@ $desktop-huge: 1600px;
 //
 
 $global-color:                                  $gray;
-$global-muted-color:                            $gray-medium;
+$global-muted-color:                            $medium-gray;
 $global-text-shadow:                            $white;
 
-$global-link-color:                             $accent-color;
-$global-link-hover-color:                       darken($accent-color,20%);
+$global-link-color:                             $base-accent-color;
+$global-link-hover-color:                       darken($base-accent-color,20%);
 
 $global-contrast-color:                         $white;
 $global-contrast-text-shadow:                   rgba(0,0,0,0.1);
 
-$global-font-size:                              16px;
-$global-line-height:                            1.5;
+$global-font-size:                              $base-font-size;
+$global-line-height:                            $base-line-height;
 
 //
 // Backgrounds & Borders
 //
 
 $global-background:                             $white;
-$global-border:                                 $gray-light;
+$global-border:                                 $light-gray;
 
 $global-border-radius:                          4px;
 
-$global-default-background:                     $gray-lighter;
+$global-default-background:                     $light;
 $global-default-hover-background:               #fafafa;
 $global-default-active-background:              #eee;
 
@@ -97,8 +146,8 @@ $global-z-index:                                1000;
 //
 
 $breakpoint-small:                               $mobile;
-$breakpoint-medium:                              $tablet-portrait;
-$breakpoint-large:                               $tablet-landscape;
+$breakpoint-medium:                              $tablet;
+$breakpoint-large:                               $laptop;
 $breakpoint-xlarge:                              $desktop;
 $breakpoint-mini-max:                            ($breakpoint-small - 1) !default;
 $breakpoint-small-max:                           ($breakpoint-medium - 1) !default;

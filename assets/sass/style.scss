@@ -1,3 +1,4 @@
+
 /*!
 	Theme Name: Genesis Uikit Starter
 	Theme URI: https://alexaspalato.com
@@ -18,25 +19,43 @@
 	Text Domain: developers
 */
 
+@import "susy";
 
+@import "bourbon";
+
+@import "partials/1-reset";
 
 @import "uikit/uikit-mixins";
 
 // theme variables and other custom stuff
 @import "themes/default-theme/variables";
-//@import "themes/default-theme/styles/blue/variables.scss";
-@import "themes/default-theme/base";
+//@import "themes/default-theme/styles/blue/_blue-variables";
+//@import "themes/default-theme/base";
 
 @import "uikit/uikit";
 @import "uikit/components/autocomplete.scss";
 
-@import 'bourbon';
-@import 'neat';
-@import 'rem';
 
-@import 'partials/utilities/index';
-@import 'partials/base/index';
-@import 'partials/layouts/index';
-@import 'partials/components/index';
-@import 'partials/plugins/index';
-@import 'partials/views/index';
+/*--------------------------------------------------------------
+BASE
+--------------------------------------------------------------*/
+@import "base/base";
+
+
+/*partials*/
+@import "partials/2-default";
+@import "partials/3-structure";
+@import "partials/4-common-classes";
+@import "partials/5-widgets";
+@import "partials/6-plugins";
+@import "partials/7-header";
+@import "partials/8-nav";
+@import "partials/9-content";
+@import "partials/10-sidebar";
+@import "partials/11-footer";
+// @import "partials/12-media-queries";
+@import "partials/13-accessibility";
+@import "partials/14-pages";
+
+@import "custom";
+
