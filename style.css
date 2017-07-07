@@ -9362,6 +9362,20 @@ th {
 /* ## Column Classes
 --------------------------------------------- */
 /* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+  float: left;
+  margin-left: 2.564102564102564%; }
+
 .one-half,
 .three-sixths,
 .two-fourths {
@@ -9391,33 +9405,20 @@ th {
   clear: both;
   margin-left: 0; }
 
-.five-sixths,
-.four-sixths,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-sixths,
-.two-fourths,
-.two-sixths,
-.two-thirds {
-  float: left;
-  margin-left: 2.564102564102564%; }
-  @media (min-width: 0) and (max-width: 800px) {
-    .five-sixths,
-    .four-sixths,
-    .one-fourth,
-    .one-half,
-    .one-sixth,
-    .one-third,
-    .three-fourths,
-    .three-sixths,
-    .two-fourths,
-    .two-sixths,
-    .two-thirds {
-      margin: 0;
-      width: 100%; } }
+@media (min-width: 0) and (max-width: 800px) {
+  .five-sixths,
+  .four-sixths,
+  .one-fourth,
+  .one-half,
+  .one-sixth,
+  .one-third,
+  .three-fourths,
+  .three-sixths,
+  .two-fourths,
+  .two-sixths,
+  .two-thirds {
+    margin: 0;
+    width: 100%; } }
 
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
@@ -9758,6 +9759,7 @@ img.alignright,
   text-decoration: none; }
 
 .genesis-nav-menu .sub-menu {
+  border-top: 1px solid #f5f5f5;
   position: absolute;
   z-index: 99;
   left: -9999px;
@@ -9769,7 +9771,7 @@ img.alignright,
 .genesis-nav-menu .sub-menu a {
   position: relative;
   width: 200px;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #DDD;
   border-top: none;
   background-color: #fff;
@@ -9777,7 +9779,8 @@ img.alignright,
   word-wrap: break-word; }
 
 .genesis-nav-menu .sub-menu .sub-menu {
-  margin: -56px 0 0 199px; }
+  margin: -43px 0 0 199px;
+  border-top: 1px solid #DDD; }
 
 .genesis-nav-menu .menu-item:hover {
   position: static; }
