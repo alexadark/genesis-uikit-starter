@@ -1,0 +1,112 @@
+// Base Colors
+//===================
+$white: #fff;
+$black: #000;
+$accent-color: #c3251d;
+$gray-lightest: #ccc;
+$gray-lighter: #eee;
+$gray-light: #ddd;
+$gray-medium: #777;
+$gray: #333;
+
+//
+// Color Configuration
+//===========================
+
+$link--color: $global-link-color;
+$link--hover-color: $global-link-hover-color;
+
+// Elements
+$base--color: $global-color;
+$body--background-color: $global-default-background;
+
+// Form Elements
+$input--background-color: $global-background;
+$input--border-color: $global-border;
+$input--color: $gray;
+$input--focus-border-color: $gray-light;
+$button--background-color: $gray;
+$button--color: $white;
+$button--hover-background-color: $accent-color;
+$button--hover-color: $white;
+$button--disabled-background-color: $gray-lighter;
+$button--disable-color: $gray-medium;
+
+//
+// Header
+//======================
+$site-header--background-color: $white;
+$site-title--link-color: $gray;
+
+//
+// Navigation
+//============================
+$nav--link-color: $gray;
+$nav--hover-color: $accent-color;
+$submenu--border-color: $gray-lighter;
+$submenu--link-background-color: $global-background;
+
+$primary-nav--background-color: $global-background;
+$primary-nav--border-color: $gray-lighter;
+$primary-nav--link-color: $nav--link-color;
+
+$secondary-nav--background-color: $global-background;
+$secondary-nav--border-color: $gray-lighter;
+$secondary-nav--link-color: $nav--link-color;
+
+$js-nav--background-color: $global-background;
+$js-nav--hover-color: $black;
+$js-nav--focus-color: $accent-color;
+
+$nav-toggle--background-color: $global-background;
+$nav-toggle--color: $gray;
+
+$archive-pagination--background-color: $global-background;
+$archive-pagination--color: $gray;
+$archive-pagination--hover-background-color: $accent-color;
+$archive-pagination--hover-color: $global-background;
+
+//
+// Footer
+//============================
+$site-footer--background-color: $global-background;
+$site-footer--border-color: $gray-lighter;
+$footer-widgets--background-color: $global-background;
+
+//
+// Entry Content
+//===================
+$entry-footer__meta--border-color: $gray-lighter;
+$entry--background-color: $global-background;
+$entry-title--link-color: $gray;
+$entry-title--hover-color: $accent-color;
+$entry-content__code--background-color: $gray-lighter;
+$entry-content__code--color: $gray;
+
+//
+// Comments
+//===================
+$comment--background-color: $global-background;
+
+//
+// Widgets
+//===================
+$widget-title--link-color: $gray;
+
+
+//
+// Plugins
+//===================
+$enews--background-color: $gray;
+$enews--color: $white;
+$enews__input--border-color: $gray;
+$enews__submit-button--background-color: $accent-color;
+$enews__submit-button--color: $white;
+$enews__submit-button__BackgroundHoverColor: $white;
+$enews__submit-button--hover-color: $accent-color;
+
+// General Components
+$breadcrumbs--background-color: $global-background;
+$author-box--background-color: $global-background;
+$after-entry--background-color: $global-background;
+$archive-description--background-color: $gray-lightest;

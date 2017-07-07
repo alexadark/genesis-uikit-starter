@@ -1,0 +1,15 @@
+//
+// Breakpoints
+//============================
+
+//@media only screen and (max-width: 1340px) {
+$bp-larger: new-breakpoint(max-width $desktop-larger 12);
+
+//@media only screen and (max-width: 1200px) {
+$bp-large: new-breakpoint(max-width $desktop 12);
+
+//@media only screen and (max-width: 1023px) {
+$bp-medium: new-breakpoint(max-width $tablet-landscape 6);
+
+//@media only screen and (max-width: 860px) {
+$bp-small: new-breakpoint(max-width $tablet-portrait 4);

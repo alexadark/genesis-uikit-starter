@@ -1,0 +1,42 @@
+/*!
+	Theme Name: Genesis Uikit Starter
+	Theme URI: https://alexaspalato.com
+
+	Description: The Genesis-powered Developer's Starter Child Theme
+	Author: hellofromTonya
+	Author URI: https://knowthecode.io
+
+	Version: 1.0.0
+
+	Tags: black, red, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+	Template: genesis
+	Template Version: 2.2.3
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+	Text Domain: developers
+*/
+
+
+
+@import "uikit/uikit-mixins";
+
+// theme variables and other custom stuff
+@import "themes/default-theme/variables";
+//@import "themes/default-theme/styles/blue/variables.scss";
+@import "themes/default-theme/base";
+
+@import "uikit/uikit";
+@import "uikit/components/autocomplete.scss";
+
+@import 'bourbon';
+@import 'neat';
+@import 'rem';
+
+@import 'partials/utilities/index';
+@import 'partials/base/index';
+@import 'partials/layouts/index';
+@import 'partials/components/index';
+@import 'partials/plugins/index';
+@import 'partials/views/index';
