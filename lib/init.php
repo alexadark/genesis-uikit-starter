@@ -25,10 +25,11 @@ function wst_init_constants() {
 	define( 'CHILD_TEXT_DOMAIN', $child_theme->get( 'TextDomain' ) );
 
 	define( 'CHILD_THEME_DIR', get_stylesheet_directory() );
+	define( 'CHILD_URI', get_stylesheet_directory_uri() );
 	define( 'CHILD_CONFIG_DIR', CHILD_THEME_DIR . '/config/' );
 	define( 'CHILD_LIB', CHILD_THEME_DIR . '/lib/' );
-	define( 'CHILD_IMG', CHILD_THEME_DIR . '/assets/images/' );
-	define( 'CHILD_JS', CHILD_THEME_DIR . '/assets/js/' );
+	define( 'CHILD_IMG', CHILD_URI . '/assets/images/' );
+	define( 'CHILD_JS', CHILD_URI . '/assets/js/' );
 
 }
 
