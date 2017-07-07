@@ -1,0 +1,204 @@
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Site Containers
+--------------------------------------------- */
+
+
+.wrap {
+	@include susy-media( $laptop) {
+		max-width: 960px;
+	}
+	@include susy-media( $desktop) {
+		max-width: 1200px;
+	}
+
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.site-inner {
+	@include susy-media( 0 $laptop) {
+		max-width: 800px;
+	}
+	@include susy-media( 0 $desktop) {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	clear: both;
+	padding-top: 40px;
+}
+
+.site-inner,
+.wrap {
+	@include susy-media( 0 $tablet) {
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	@include susy-media( $desktop) {
+		width: 980px;
+	}
+
+	width: 740px;
+}
+
+.content-sidebar-sidebar .content-sidebar-wrap {
+	float: left;
+}
+
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	float: right;
+}
+
+/* ### Content */
+
+.content {
+	@include susy-media( $laptop) {
+		width: 620px;
+	}
+	@include susy-media( $desktop) {
+		width: 800px;
+	}
+
+	float: right;
+	width: 100%;
+}
+
+.content-sidebar .content,
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content {
+	float: left;
+}
+
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content {
+	@include susy-media( $desktop) {
+		width: 580px;
+	}
+
+	width: 400px;
+}
+
+.full-width-content .content {
+	width: 100%;
+}
+
+/* ### Primary Sidebar */
+
+.sidebar-primary {
+	@include susy-media( $laptop) {
+		width: 300px;
+	}
+	@include susy-media( $desktop) {
+		width: 360px;
+	}
+
+	float: right;
+	width: 100%;
+}
+
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+	float: left;
+}
+
+/* ### Secondary Sidebar */
+
+.sidebar-secondary {
+	float: left;
+	width: 180px;
+}
+
+.content-sidebar-sidebar .sidebar-secondary {
+	float: right;
+}
+
+/* ## Column Classes
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+
+
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65.81196581196582%;
+}
+
+.one-fourth {
+	width: 23.076923076923077%;
+}
+
+.three-fourths {
+	width: 74.35897435897436%;
+}
+
+.one-sixth {
+	width: 14.52991452991453%;
+}
+
+.five-sixths {
+	width: 82.90598290598291%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	@include susy-media(0 $tablet) {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+

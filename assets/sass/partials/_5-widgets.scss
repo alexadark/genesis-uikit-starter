@@ -1,0 +1,45 @@
+/* # Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.widget {
+	word-wrap: break-word;
+}
+
+.widget ol > li {
+	padding-left: 20px;
+	text-indent: -20px;
+	list-style-position: inside;
+	list-style-type: decimal;
+}
+
+.widget li li {
+	margin: 0 0 0 30px;
+	padding: 0;
+	border: none;
+}
+
+.widget_calendar table {
+	width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+	text-align: center;
+}
+
+/* ## Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+	margin-bottom: 20px;
+	padding: 0 0 24px;
+	border-bottom: 2px solid $light;
+}
+
+.footer-widgets .entry {
+	border-bottom: 1px dotted $medium-gray;
+}
+
+.featured-content .entry-title {
+	font-size: 20px;
+}
