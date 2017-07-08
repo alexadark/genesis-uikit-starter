@@ -189,7 +189,9 @@
 --------------------------------------------- */
 
 .nav-secondary {
-  background-color: $light-gray;
+  background-color: $white;
+  border-bottom: 1px solid $base-border-color;
+  margin-bottom:40px;
 }
 
 /* Responsive Menu

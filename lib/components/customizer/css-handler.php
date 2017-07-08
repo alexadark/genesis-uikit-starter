@@ -7,24 +7,23 @@
  * @licence GNU General Public License 2.0+
  */
 
-add_action( 'wp_enqueue_scripts', 'wst_build_inline_css_from_customizer_settings' );
+add_action( 'wp_enqueue_scripts', 'genesis_sample_css' );
 /**
  * Checks the settings for the link color, and accent color.
  * If any of these value are set the appropriate CSS is output.
  *
- * @since 1.0.0
+ * @since 2.2.3
  */
-function wst_build_inline_css_from_customizer_settings() {
-	$prefix = wst_get_settings_prefix();
+function genesis_sample_css() {
 
 	$handle  = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
 
-	$color_link = get_theme_mod( $prefix . '_link_color', wst_get_default_link_color() );
-	$color_accent = get_theme_mod( $prefix . '_accent_color', wst_get_default_accent_color() );
+	$color_link = get_theme_mod( 'genesis_sample_link_color', genesis_sample_customizer_get_default_link_color() );
+	$color_accent = get_theme_mod( 'genesis_sample_accent_color', genesis_sample_customizer_get_default_accent_color() );
 
 	$css = '';
 
-	$css .= ( wst_get_default_link_color() !== $color_link ) ? sprintf( '
+	$css .= ( genesis_sample_customizer_get_default_link_color() !== $color_link ) ? sprintf( '
 
 		a,
 		.entry-title a:focus,
@@ -34,22 +33,29 @@ function wst_build_inline_css_from_customizer_settings() {
 		.genesis-nav-menu .current-menu-item > a,
 		.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 		.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
-		.js nav button:focus,
-		.js .menu-toggle:focus {
+		.menu-toggle:focus,
+		.menu-toggle:hover,
+		.sub-menu-toggle:focus,
+		.sub-menu-toggle:hover {
 			color: %s;
 		}
+
 		', $color_link ) : '';
 
-	$css .= ( wst_get_default_accent_color() !== $color_accent ) ? sprintf( '
+	$css .= ( genesis_sample_customizer_get_default_accent_color() !== $color_accent ) ? sprintf( '
 
 		button:focus,
 		button:hover,
-		input:focus[type="button"],
-		input:focus[type="reset"],
-		input:focus[type="submit"],
-		input:hover[type="button"],
-		input:hover[type="reset"],
-		input:hover[type="submit"],
+		input[type="button"]:focus,
+		input[type="button"]:hover,
+		input[type="reset"]:focus,
+		input[type="reset"]:hover,
+		input[type="submit"]:focus,
+		input[type="submit"]:hover,
+		input[type="reset"]:focus,
+		input[type="reset"]:hover,
+		input[type="submit"]:focus,
+		input[type="submit"]:hover,
 		.archive-pagination li a:focus,
 		.archive-pagination li a:hover,
 		.archive-pagination .active a,
@@ -59,7 +65,7 @@ function wst_build_inline_css_from_customizer_settings() {
 			background-color: %s;
 			color: %s;
 		}
-		', $color_accent, wst_calculate_color_contrast( $color_accent ) ) : '';
+		', $color_accent, genesis_sample_color_contrast( $color_accent ) ) : '';
 
 	if ( $css ) {
 		wp_add_inline_style( $handle, $css );

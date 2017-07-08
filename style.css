@@ -8710,6 +8710,283 @@ a.uk-thumbnail:focus {
     page-break-after: avoid; } }
 
 /* ========================================================================
+   Component: Slideshow
+ ========================================================================== */
+/*
+ * 1. Create position context
+ * 2. Create stacking context to prevent z-index issues with other components
+ * 3. Set width because child elements are positioned absolute. Height is set via JS
+ * 4. Reset list style
+ * 5. Clip child elements
+ * 6. Deactivate browser history navigation in IE11
+ */
+.uk-slideshow {
+  /* 1 */
+  position: relative;
+  /* 2 */
+  z-index: 0;
+  /* 3 */
+  width: 100%;
+  /* 4 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 5 */
+  overflow: hidden;
+  /* 6 */
+  -ms-touch-action: pan-y;
+      touch-action: pan-y; }
+
+/*
+ * Sub-object item
+ * 1. Position items above each other
+ * 2. Expand to parent container width
+ * 3. Hide by default
+ */
+.uk-slideshow > li {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  opacity: 0; }
+
+/*
+ * Active
+ * 1. Stack at first
+ * 2. Show slide
+ */
+.uk-slideshow > .uk-active {
+  /* 1 */
+  z-index: 10;
+  /* 2 */
+  opacity: 1; }
+
+/*
+ * Hide default images which is only relevant to keep existing proportions
+ */
+.uk-slideshow > li > img {
+  visibility: hidden; }
+
+/*
+ * Pointer for controls
+ */
+[data-uk-slideshow-slide] {
+  cursor: pointer; }
+
+/* Modifier: `uk-slideshow-fullscreen`
+ ========================================================================== */
+.uk-slideshow-fullscreen,
+.uk-slideshow-fullscreen > li {
+  height: 100vh; }
+
+/* Animations
+ ========================================================================== */
+/*
+ * Fade
+ */
+.uk-slideshow-fade-in {
+  -webkit-animation: uk-fade 0.5s linear;
+  animation: uk-fade 0.5s linear; }
+
+.uk-slideshow-fade-out {
+  -webkit-animation: uk-fade 0.5s linear reverse;
+  animation: uk-fade 0.5s linear reverse; }
+
+/*
+ * Scroll
+ */
+.uk-slideshow-scroll-forward-in {
+  -webkit-animation: uk-slide-right 0.5s ease-in-out;
+  animation: uk-slide-right 0.5s ease-in-out; }
+
+.uk-slideshow-scroll-forward-out {
+  -webkit-animation: uk-slide-left 0.5s ease-in-out reverse;
+  animation: uk-slide-left 0.5s ease-in-out reverse; }
+
+.uk-slideshow-scroll-backward-in {
+  -webkit-animation: uk-slide-left 0.5s ease-in-out;
+  animation: uk-slide-left 0.5s ease-in-out; }
+
+.uk-slideshow-scroll-backward-out {
+  -webkit-animation: uk-slide-right 0.5s ease-in-out reverse;
+  animation: uk-slide-right 0.5s ease-in-out reverse; }
+
+/*
+ * Scale
+ */
+.uk-slideshow-scale-out {
+  -webkit-animation: uk-fade-scale-15 0.5s ease-in-out reverse;
+  animation: uk-fade-scale-15 0.5s ease-in-out reverse; }
+
+/*
+ * Swipe
+ */
+.uk-slideshow-swipe-forward-in {
+  -webkit-animation: uk-slide-left-33 0.5s ease-in-out;
+  animation: uk-slide-left-33 0.5s ease-in-out; }
+
+.uk-slideshow-swipe-forward-out {
+  -webkit-animation: uk-slide-left 0.5s ease-in-out reverse;
+  animation: uk-slide-left 0.5s ease-in-out reverse; }
+
+.uk-slideshow-swipe-backward-in {
+  -webkit-animation: uk-slide-right-33 0.5s ease-in-out;
+  animation: uk-slide-right-33 0.5s ease-in-out; }
+
+.uk-slideshow-swipe-backward-out {
+  -webkit-animation: uk-slide-right 0.5s ease-in-out reverse;
+  animation: uk-slide-right 0.5s ease-in-out reverse; }
+
+.uk-slideshow-swipe-forward-in:before,
+.uk-slideshow-swipe-backward-in:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-animation: uk-fade 0.5s ease-in-out reverse;
+  animation: uk-fade 0.5s ease-in-out reverse; }
+
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+/* Sub-object: `uk-accordion-title`
+ ========================================================================== */
+.uk-accordion-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background: #eee;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer; }
+
+/* Sub-object: `uk-accordion-content`
+ ========================================================================== */
+.uk-accordion-content {
+  padding: 0 15px 15px 15px; }
+
+/*
+ * Micro clearfix to make panels more robust
+ */
+.uk-accordion-content:before,
+.uk-accordion-content:after {
+  content: "";
+  display: table; }
+
+.uk-accordion-content:after {
+  clear: both; }
+
+/*
+ * Remove margin from the last-child
+ */
+.uk-accordion-content > :last-child {
+  margin-bottom: 0; }
+
+/* ========================================================================
+   Component: Slidenav
+ ========================================================================== */
+/*
+ * 1. Required for `a` elements
+ * 2. Dimension
+ * 3. Style
+ */
+.uk-slidenav {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  /* 3 */
+  line-height: 60px;
+  color: rgba(50, 50, 50, 0.4);
+  font-size: 60px;
+  text-align: center; }
+
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ * 3. Required for `a` elements
+ * 4. Style
+ */
+.uk-slidenav:hover,
+.uk-slidenav:focus {
+  /* 2 */
+  outline: none;
+  /* 3 */
+  text-decoration: none;
+  /* 4 */
+  color: rgba(50, 50, 50, 0.7);
+  cursor: pointer; }
+
+/* Active */
+.uk-slidenav:active {
+  color: rgba(50, 50, 50, 0.9); }
+
+/*
+ * Icons
+ */
+.uk-slidenav-previous:before {
+  content: "";
+  font-family: FontAwesome; }
+
+.uk-slidenav-next:before {
+  content: "";
+  font-family: FontAwesome; }
+
+/* Sub-object: `uk-slidenav-position`
+ ========================================================================== */
+/*
+ * Create position context
+ */
+.uk-slidenav-position {
+  position: relative; }
+
+/*
+ * Center vertically
+ */
+.uk-slidenav-position .uk-slidenav {
+  display: none;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -30px; }
+
+.uk-slidenav-position:hover .uk-slidenav {
+  display: block; }
+
+.uk-slidenav-position .uk-slidenav-previous {
+  left: 20px; }
+
+.uk-slidenav-position .uk-slidenav-next {
+  right: 20px; }
+
+/* Modifier: `uk-slidenav-contrast`
+ ========================================================================== */
+.uk-slidenav-contrast {
+  color: rgba(255, 255, 255, 0.5); }
+
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ */
+.uk-slidenav-contrast:hover,
+.uk-slidenav-contrast:focus {
+  color: rgba(255, 255, 255, 0.7); }
+
+/* Active */
+.uk-slidenav-contrast:active {
+  color: rgba(255, 255, 255, 0.9); }
+
+/* ========================================================================
    Component: Autocomplete
  ========================================================================== */
 /*
@@ -8773,7 +9050,7 @@ input[type="submit"] {
   border-radius: 0.1875rem;
   color: white;
   display: inline-block;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: 1;
   padding: .75em 1em;
@@ -8788,35 +9065,35 @@ body {
   background-color: #f5f5f5;
   color: #333;
   font-family: "source sans pro", helvetica, arial;
-  font-size: 1.125rem;
-  line-height: 1.6875; }
+  font-size: 1.25rem;
+  line-height: 1.875; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "source sans pro", helvetica, arial;
-  line-height: 1.40625rem;
+  line-height: 1.5625rem;
   margin: 0;
   text-rendering: optimizeLegibility; }
 
 h1 {
-  font-size: 2.53125rem; }
+  font-size: 2.8125rem; }
 
 h2 {
-  font-size: 2.25rem; }
+  font-size: 2.5rem; }
 
 h3 {
-  font-size: 1.96875rem; }
+  font-size: 2.1875rem; }
 
 h4 {
-  font-size: 1.6875rem; }
+  font-size: 1.875rem; }
 
 h5 {
-  font-size: 1.40625rem; }
+  font-size: 1.5625rem; }
 
 h6 {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 p {
-  margin: 0 0 0.84375rem; }
+  margin: 0 0 0.9375rem; }
 
 a {
   -webkit-transition: color 0.4s ease-in-out;
@@ -8834,7 +9111,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: 1.6875rem 0; }
+  margin: 1.875rem 0; }
 
 img {
   margin: 0;
@@ -8843,8 +9120,8 @@ img {
 blockquote {
   border-left: 2px solid #DDD;
   color: #595959;
-  margin: 1.6875rem 0;
-  padding-left: 0.84375rem; }
+  margin: 1.875rem 0;
+  padding-left: 0.9375rem; }
 
 cite {
   color: #737373;
@@ -8855,19 +9132,19 @@ cite {
 fieldset {
   background: #f7f7f7;
   border: 1px solid #DDD;
-  margin: 0 0 0.84375rem 0;
-  padding: 1.6875rem; }
+  margin: 0 0 0.9375rem 0;
+  padding: 1.875rem; }
 
 input,
 label,
 select {
   display: block;
   font-family: "source sans pro", helvetica, arial;
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 label {
   font-weight: bold;
-  margin-bottom: 0.421875rem; }
+  margin-bottom: 0.46875rem; }
   label.required:after {
     content: "*"; }
   label abbr {
@@ -8884,9 +9161,9 @@ select[multiple=multiple] {
   border: 1px solid #DDD;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "source sans pro", helvetica, arial;
-  font-size: 1.125rem;
-  margin-bottom: 0.84375rem;
-  padding: 0.5625rem 0.5625rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.9375rem;
+  padding: 0.625rem 0.625rem;
   width: 100%; }
   textarea:hover,
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
@@ -8911,33 +9188,33 @@ input[type="search"] {
 
 input[type="checkbox"], input[type="radio"] {
   display: inline;
-  margin-right: 0.421875rem; }
+  margin-right: 0.46875rem; }
 
 input[type="file"] {
-  margin-bottom: 0.84375rem;
-  padding-bottom: 0.5625rem;
+  margin-bottom: 0.9375rem;
+  padding-bottom: 0.625rem;
   width: 100%; }
 
 select {
   width: auto;
   max-width: 100%;
-  margin-bottom: 1.6875rem; }
+  margin-bottom: 1.875rem; }
 
 table {
   border-collapse: collapse;
-  margin: 0.84375rem 0;
+  margin: 0.9375rem 0;
   table-layout: fixed;
   width: 100%; }
 
 th {
   border-bottom: 1px solid #b7b7b7;
   font-weight: bold;
-  padding: 0.84375rem 0;
+  padding: 0.9375rem 0;
   text-align: left; }
 
 td {
   border-bottom: 1px solid #DDD;
-  padding: 0.84375rem 0; }
+  padding: 0.9375rem 0; }
 
 tr, td, th {
   vertical-align: middle; }
@@ -8948,10 +9225,10 @@ ul, ol {
   list-style-type: none; }
 
 dl {
-  margin-bottom: 0.84375rem; }
+  margin-bottom: 0.9375rem; }
   dl dt {
     font-weight: bold;
-    margin-top: 0.84375rem; }
+    margin-top: 0.9375rem; }
   dl dd {
     margin: 0; }
 
@@ -8983,11 +9260,11 @@ body {
   font-family: "source sans pro", helvetica, arial;
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.6875; }
+  line-height: 1.875; }
   @media (min-width: 800px) {
     body {
       background-color: #f5f5f5;
-      font-size: 1.125rem; } }
+      font-size: 1.25rem; } }
 
 a,
 button,
@@ -9022,7 +9299,7 @@ a {
     color: #c9251e; }
 
 hr {
-  margin: 1.6875rem 0;
+  margin: 1.875rem 0;
   border-top: none;
   border-right: none;
   border-bottom: 1px solid #DDD;
@@ -9073,25 +9350,25 @@ h6 {
   line-height: 1.2; }
 
 h1 {
-  font-size: 2.53125rem; }
+  font-size: 2.8125rem; }
 
 h2 {
-  font-size: 2.25rem; }
+  font-size: 2.5rem; }
 
 h3 {
-  font-size: 1.96875rem; }
+  font-size: 2.1875rem; }
 
 h4 {
-  font-size: 1.6875rem; }
+  font-size: 1.875rem; }
 
 h5 {
-  font-size: 1.40625rem; }
+  font-size: 1.5625rem; }
 
 h6 {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 p {
-  margin: 0 0 0.84375rem; }
+  margin: 0 0 0.9375rem; }
 
 /* ## Objects
 --------------------------------------------- */
@@ -9870,7 +10147,9 @@ img.alignright,
 /* ## Secondary Navigation
 --------------------------------------------- */
 .nav-secondary {
-  background-color: #DDD; }
+  background-color: #fff;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 40px; }
 
 /* Responsive Menu
 --------------------------------------------- */
