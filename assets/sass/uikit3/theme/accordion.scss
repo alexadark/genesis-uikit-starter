@@ -18,7 +18,11 @@ $internal-accordion-close-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20widt
 // Component
 // ========================================================================
 
-// @mixin hook-accordion(){}
+ @mixin hook-accordion(){
+   li{
+     list-style-type: none !important;
+   }
+ }
 
 
 // Item

@@ -4906,6 +4906,8 @@ ul.uk-nav-sub {
 .uk-accordion {
   padding: 0;
   list-style: none; }
+  .uk-accordion li {
+    list-style-type: none !important; }
 
 /* Item
  ========================================================================== */
@@ -7398,7 +7400,7 @@ td.uk-text-break {
   background-color: #f8f8f8; }
 
 .uk-background-primary {
-  background-color: #1e87f0; }
+  background-color: #e5554e; }
 
 .uk-background-secondary {
   background-color: #222; }

@@ -18,10 +18,14 @@ function wst_enqueue_scripts_styles() {
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-	wp_enqueue_script('uikit-js',CHILD_JS. 'uikit/min/uikit-min.js', array('jquery'), '2.27.2', true);
+	wp_enqueue_script('uikit-js', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js', array('jquery'), '3.0.0-beta.25', true);
+//
+//	wp_enqueue_script('uikit-comps-js',CHILD_JS. 'uikit/min/uikit-comps-min.js', array('uikit-js'),
+//		'1', true);
 
-	wp_enqueue_script('uikit-comps-js',CHILD_JS. 'uikit/min/uikit-comps-min.js', array('uikit-js'),
-		'1', true);
+	wp_enqueue_script('uikit-icons-js', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit-icons.min.js',
+		array('uikit-js'),
+		'3.0.0-beta.25', true);
 
 
 
