@@ -21,10 +21,10 @@ $light-gray: #DDD;
 $medium-gray: #999;
 $dark-gray: #333;
 $blue: #2980b9;
-$red: #e5554e;
+$pink: #D81B60;
 $dark-blue: #34495e;
 
-$base-accent-color: $red;
+$base-accent-color: $pink;
 $base-font-color: $dark-gray;
 
 //
@@ -32,10 +32,12 @@ $base-font-color: $dark-gray;
 //
 $sans-serif: helvetica, arial;
 $serif: georgia;
-$base-font-family: "source sans pro", $sans-serif;
-$header-font-family: "source sans pro",$sans-serif;
+$base-font-family:'Nunito Sans', sans-serif;
+$heading-font-family: 'Old Standard TT', serif;
+$base-body-font-family: $base-font-family;
 
-$base-font-size: 20px;
+
+$base-font-size: 16px;
 $base-line-height:  1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;

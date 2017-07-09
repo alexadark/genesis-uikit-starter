@@ -99,7 +99,7 @@ function wst_add_theme_supports() {
 			'footer-widgets',
 			'footer'
 		),
-		'woocommerce'                     => null
+//		'woocommerce'                     => null
 	);
 
 	foreach ( $config as $feature => $args ) {

@@ -13,7 +13,7 @@ add_action( 'wp_enqueue_scripts', 'wst_enqueue_scripts_styles' );
  */
 function wst_enqueue_scripts_styles() {
 
-	wp_enqueue_style( CHILD_TEXT_DOMAIN.'-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( CHILD_TEXT_DOMAIN.'-fonts', '//fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700i|Old+Standard+TT:400,400i,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';

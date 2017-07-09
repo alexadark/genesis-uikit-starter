@@ -49,9 +49,13 @@ $base-pre-border-radius:                         3px !default;
 // Headings
 // ========================================================================
 
-// @mixin hook-base-heading(){}
+ @mixin hook-base-heading(){
+   font-family: $heading-font-family;
+ }
 
-// @mixin hook-base-h1(){}
+ @mixin hook-base-h1(){
+
+ }
 
 // @mixin hook-base-h2(){}
 

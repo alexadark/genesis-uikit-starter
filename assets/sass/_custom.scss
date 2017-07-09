@@ -1,26 +1,68 @@
-
-.woocommerce {
-  .content {
+.woocommerce{
+  #content{
     background: $global-background;
-    @include susy-media($tablet) {
-      padding: 40px;
-    }
-  }
-  .products {
-    .entry {
-      padding: 10px;
-      @include susy-media($tablet) {
-        @include gallery(4 of 12);
-      }
-      @include susy-media($desktop) {
-        @include gallery(3 of 12);
-      }
-    }
+    padding: 40px;
   }
 }
 
-button{
-  @extend .uk-button;
-  @extend .uk-button-default;
+.product.entry{
+  padding: 10px;
+}
 
+
+
+
+.woocommerce .woocommerce-ordering select, .woocommerce div.product form.cart .variations select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: inherit;
+  font-size: 10px;
+  height: 34px;
+  padding: 0 10px;
+  color: inherit;
+  cursor: pointer;
+  min-width: 136px;
+  width:200px;
+  float: right;
+
+}
+.woocommerce-result-count{
+  float: left;
+  margin: 0;
+}
+.products{
+  clear: both;
+}
+
+select.orderby {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  padding: 7px;
+
+}
+
+span.onsale {
+
+  background-color: $base-accent-color;
+  position:absolute;
+  color:$white;
+  padding: 5px 10px;
+  margin-left: -6px;
+  margin-top: 20px;
+
+
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 0.382em solid transparent;
+    border-left-color: black;
+    transform: rotate(-45deg);
+    left: 2px;
+    top: calc(2em - 0.38em);
+    border-radius: 0;
+  }
 }
