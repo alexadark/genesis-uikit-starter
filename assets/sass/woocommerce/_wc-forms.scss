@@ -1,0 +1,53 @@
+/* WooCommerce Forms
+---------------------------------------------------------------------------------------------------- */
+
+.woocommerce #reviews #comment {
+  height: 150px;
+}
+
+.woocommerce .quantity .qty {
+  font-size: rem(20);
+  line-height: 1.5;
+  margin-right: 5px;
+  padding: 12px 5px;
+  width: 70px;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  line-height: 1.5;
+  padding: 8px 20px;
+}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text,
+#add_payment_method table.cart td.actions .coupon .input-text {
+  border-color: $base-border-color;
+  padding: 5px 20px;
+  width: 150px;
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register,
+.woocommerce form .form-row .select2-container,
+.woocommerce form .form-row.woocommerce-validated input.input-text,
+.woocommerce form .form-row.woocommerce-validated select,
+.woocommerce form .form-row.woocommerce-validated .select2-container {
+  border-color: $base-border-color;
+  border-radius: 0;
+}
+
+.woocommerce-cart table.cart input,
+.woocommerce-checkout table.cart input,
+#add_payment_method table.cart input {
+  vertical-align: top;
+}
+
+.woocommerce .coupon {
+  line-height: 1;
+}
+
+.woocommerce .coupon .input-text {
+  height: 48px;
+}
