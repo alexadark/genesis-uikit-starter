@@ -9,7 +9,10 @@ $base-font-size: rem(20);
 $base-line-height: $base-font-size * 1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;
-$base-border-radius: rem(3);
+$base-border-radius: rem(0);
+
+$max-width: 1200px;
+
 
 // Colors
 $white:#fff;

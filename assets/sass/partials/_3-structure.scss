@@ -10,7 +10,7 @@
 		max-width: 960px;
 	}
 	@include susy-media( $desktop) {
-		max-width: 1200px;
+		max-width: $max-width;
 	}
 
 	max-width: 800px;

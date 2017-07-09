@@ -23,7 +23,7 @@ function genesis_sample_products_match_height() {
 		return;
 	}
 
-	wp_enqueue_script( 'genesis-sample-match-height', get_stylesheet_directory_uri() . '/js/jquery.matchHeight.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'genesis-sample-match-height', get_stylesheet_directory_uri() . '/assets/js/jquery.matchHeight.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_add_inline_script( 'genesis-sample-match-height', "jQuery(document).ready( function() { jQuery( '.product .woocommerce-LoopProduct-link').matchHeight(); });" );
 
 }

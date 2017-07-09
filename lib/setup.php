@@ -8,7 +8,7 @@
  * @license     GNU General Public License 2.0+
  */
 
-add_action( 'genesis_setup', 'wst_setup_child_theme', 15 );
+
 /**
  * Set up child theme.
  *
@@ -23,11 +23,12 @@ function wst_setup_child_theme() {
 
 	wst_register_widget_areas();
 
-	wst_unregister_genesis_callbacks();
-
 	wst_add_theme_supports();
 	wst_add_new_image_sizes();
+	wst_unregister_layouts();
 }
+
+wst_setup_child_theme();
 
 /**
  * Register widget areas
@@ -56,33 +57,7 @@ function wst_register_widget_areas() {
 	}
 }
 
-/**
- * Unregister Genesis callbacks.  We do this here because the child theme loads before Genesis.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function wst_unregister_genesis_callbacks() {
-	wst_unregister_menu_callbacks();
-	//wst_unregister_header_callbacks();
-	//wst_unregister_footer_callbacks();
-	//wst_unregister_post_callbacks();
-	//wst_unregister_sidebar_callbacks();
-	//wst_unregister_comments_callbacks();
-	//wst_unregister_archive_callbacks();
 
-	//add each of the unregister structure callbacks here
-}
-
-
-/**
- * Add theme supports to the site
- *
- * @since 1.0.0
- *
- * @return void
- */
 function wst_add_theme_supports() {
 
 	$config = array(
@@ -116,14 +91,15 @@ function wst_add_theme_supports() {
 			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
 			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )
 		),
-		'genesis-structural-wraps' => array(
+		'genesis-structural-wraps'        => array(
 			'header',
 			'nav',
 			'subnav',
 			'site-inner',
 			'footer-widgets',
 			'footer'
-		)
+		),
+		'woocommerce'                     => null
 	);
 
 	foreach ( $config as $feature => $args ) {
@@ -150,7 +126,7 @@ function wst_add_new_image_sizes() {
 		),
 	);
 
-	foreach( $config as $name => $args ) {
+	foreach ( $config as $name => $args ) {
 		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
 
 		add_image_size( $name, $args['width'], $args['height'], $crop );
@@ -211,3 +187,38 @@ function wst_get_theme_settings_defaults() {
 		'site_layout'               => 'content-sidebar',
 	);
 }
+
+function wst_unregister_layouts(){
+	$layouts = array(
+		'content-sidebar-sidebar',
+		'sidebar-content-sidebar',
+		'sidebar-sidebar-content'
+	);
+	foreach ( $layouts as $layout ) {
+		genesis_unregister_layout($layout);
+	}
+}
+
+
+
+// Remove site layouts.
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+// Change order of main stylesheet to override plugin styles.
+remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
+add_action( 'wp_enqueue_scripts', 'genesis_enqueue_main_stylesheet', 99 );
+
+add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+function jk_dequeue_styles( $enqueue_styles ) {
+	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+	unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	return $enqueue_styles;
+}
+
+
+
+
+

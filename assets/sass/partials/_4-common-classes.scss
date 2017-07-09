@@ -50,62 +50,9 @@
 	margin-bottom: 0;
 }
 
-/* ## Search Form
---------------------------------------------- */
 
-.search-form {
-	overflow: hidden;
-}
 
-.site-header .search-form {
-	float: right;
-	margin-top: 12px;
-}
 
-.entry-content .search-form,
-.site-header .search-form {
-	width: 50%;
-}
-
-.genesis-nav-menu .search input[type="submit"],
-.widget_search input[type="submit"] {
-	clip: rect(0, 0, 0, 0);
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-}
-
-/* ## Titles
---------------------------------------------- */
-
-.archive-title {
-	font-size: 20px;
-}
-
-.entry-title {
-	font-size: 36px;
-}
-
-.entry-title a,
-.sidebar .widget-title a {
-	color: $base-link-color;
-}
-
-.entry-title a:hover {
-	color: $hover-link-color;
-}
-
-.widget-title {
-	margin-bottom: 20px;
-	font-size: 18px;
-}
-
-.footer-widgets .widget-title {
-	color: $white;
-}
 
 /* ## WordPress
 --------------------------------------------- */

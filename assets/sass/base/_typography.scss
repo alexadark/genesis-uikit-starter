@@ -1,87 +1,173 @@
+/* ## Typographical Elements
+--------------------------------------------- */
+
 body {
-  -webkit-font-smoothing: antialiased;
-  background-color: $base-background-color;
+  @include susy-media($tablet) {
+    background-color: $base-background-color;
+    font-size: $base-font-size;
+  }
+
+  margin: 0;
   color: $base-font-color;
+  background-color: $white;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: 16px;
+  font-weight: 300;
   line-height: $unitless-line-height;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
-  line-height: $header-line-height;
-  margin: 0;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+  @include transition(all 0.4s ease-in-out);
 }
 
-h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+::-moz-selection {
+  color: $white;
+  background-color: $dark-gray;
 }
 
-h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
-}
-
-h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
-}
-
-h4 {
-  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
-}
-
-h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
-}
-
-h6 {
-  font-size: $base-font-size;
-}
-
-p {
-  margin: 0 0 ($base-line-height * .5);
+::selection {
+  color: $white;
+  background-color: $dark-gray;
 }
 
 a {
   @include transition(color 0.4s ease-in-out);
+
   color: $base-link-color;
   text-decoration: none;
-
   &:hover {
     color: $hover-link-color;
+    text-decoration: none;
   }
-
-  &:active, &:focus {
-    color: $hover-link-color;
+  &:active,
+  &:focus {
     outline: none;
+    color: $hover-link-color;
   }
 }
 
 hr {
+  margin: $base-line-height 0;
+  border-top: none;
+  border-right: none;
   border-bottom: 1px solid $base-border-color;
   border-left: none;
-  border-right: none;
-  border-top: none;
-  margin: $base-line-height 0;
 }
 
-img {
+ol,
+ul {
   margin: 0;
-  max-width: 100%;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+blockquote,
+cite,
+em,
+i {
+  font-style: italic;
 }
 
 blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
-  margin: $base-line-height 0;
-  padding-left: $base-line-height / 2;
+  margin: 40px;
 }
 
-cite {
-  color: lighten($base-font-color, 25);
-  font-style: italic;
+blockquote::before {
+  display: block;
+  position: relative;
+  top: -10px;
+  left: -20px;
+  height: 0;
+  font-size: 30px;
+  content: "\201C";
+}
 
-  &:before {
-    content: '\2014 \00A0';
-  }
+/* ## Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0 0 10px;
+  color: $base-accent-color;
+  font-family: $header-font-family;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+}
+
+h2, .h2 {
+  font-size: $base-font-size * 2; // 16 * 2 = 32px
+}
+
+h3, .h3 {
+  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+}
+
+h4, .h4 {
+  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+}
+
+h5, .h5 {
+  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+}
+
+h6, .h6 {
+  font-size: $base-font-size;
+}
+
+p {
+  margin: 0 0 ($base-line-height * 0.5);
+}
+
+/* ## Titles
+--------------------------------------------- */
+
+.archive-title {
+  font-size: 20px;
+}
+
+.entry-title {
+  font-size: 36px;
+}
+
+.entry-title a,
+.sidebar .widget-title a {
+  color: $base-link-color;
+}
+
+.entry-title a:hover {
+  color: $hover-link-color;
+}
+
+.widget-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-widgets .widget-title {
+  color: $white;
 }
