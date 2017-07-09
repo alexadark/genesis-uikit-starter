@@ -24,16 +24,21 @@
 @import "bourbon";
 
 @import "partials/1-reset";
-
-@import "uikit/uikit-mixins";
-
-// theme variables and other custom stuff
-@import "themes/default-theme/variables";
+//
+//@import "uikit/uikit-mixins";
+////
+////// theme variables and other custom stuff
+//@import "themes/default-theme/variables";
 //@import "themes/default-theme/styles/blue/_blue-variables";
-//@import "themes/default-theme/base";
+////@import "themes/default-theme/base";
+////
+//@import "uikit/uikit";
+//@import "uikit/components/autocomplete.scss";
 
-@import "uikit/uikit";
-@import "uikit/components/autocomplete.scss";
+@import "uikit3/variables-theme.scss";
+@import "uikit3/mixins-theme.scss";
+@import "uikit3/uikit-theme.scss";
+
 
 
 /*--------------------------------------------------------------
@@ -41,7 +46,7 @@ BASE
 --------------------------------------------------------------*/
 @import "base/base";
 
-
+//
 /*partials*/
 @import "partials/2-default";
 @import "partials/3-structure";
