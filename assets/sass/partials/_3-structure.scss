@@ -69,7 +69,7 @@
 		width: 620px;
 	}
 	@include susy-media( $desktop) {
-		width: 800px;
+		width: 840px;
 	}
 
 	float: right;
@@ -103,7 +103,7 @@
 		width: 300px;
 	}
 	@include susy-media( $desktop) {
-		width: 360px;
+		width: 300px;
 	}
 
 	float: right;
@@ -200,5 +200,6 @@
 		width: 100%;
 	}
 }
+
 
 
