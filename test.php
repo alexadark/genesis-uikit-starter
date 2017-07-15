@@ -91,6 +91,8 @@ function wst_test_uikit(){ ?>
 
     <button class="uk-button uk-button-default">Button</button>
 
+    <div class="media-queries">Test</div>
+
 
 
 <?php }

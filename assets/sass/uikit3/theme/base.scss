@@ -29,7 +29,9 @@ $base-pre-border-radius:                         3px !default;
 // Body
 // ========================================================================
 
-// @mixin hook-base-body(){}
+ @mixin hook-base-body(){
+   font-size:100%;
+ }
 
 
 // Links
