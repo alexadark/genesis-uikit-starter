@@ -5,108 +5,108 @@
 --------------------------------------------- */
 
 .entry {
-	@include susy-media( $tablet) {
-		padding: 50px 60px;
-	}
+  @include min-screen($tablet) {
+    padding: 50px 60px;
+  }
 
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .content .entry {
-	background-color: $white;
+  background-color: $white;
 }
 
 .entry-content ol,
 .entry-content ul {
-	margin-bottom: 28px;
-	margin-left: 40px;
+  margin-bottom: 28px;
+  margin-left: 40px;
 }
 
 .entry-content ol > li {
-	list-style-type: decimal;
+  list-style-type: decimal;
 }
 
 .entry-content ul > li {
-	list-style-type: disc;
+  list-style-type: disc;
 }
 
 .entry-content ol ol,
 .entry-content ul ul {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .entry-content code {
-	color: $light-gray;
-	background-color: $dark-gray;
+  color: $light-gray;
+  background-color: $dark-gray;
 }
 
 /* ## Entry Meta
 --------------------------------------------- */
 
 p.entry-meta {
-	margin-bottom: 0;
-	font-size: 16px;
+  margin-bottom: 0;
+  font-size: 16px;
 }
 
 .entry-header .entry-meta {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 // featured image without margings
 
 .entry-header {
-	.featured-img {
-		margin: -50px -60px 20px;
-	}
+  .featured-img {
+    margin: -50px -60px 20px;
+  }
 }
 
 .entry-footer .entry-meta {
-	padding-top: 24px;
-	border-top: 2px solid $light;
+  padding-top: 24px;
+  border-top: 2px solid $light;
 }
 
 .entry-categories,
 .entry-tags {
-	display: block;
+  display: block;
 }
 
 .entry-comments-link::before {
-	margin: 0 6px 0 2px;
-	content: "\2014";
+  margin: 0 6px 0 2px;
+  content: "\2014";
 }
 
 /* ## Pagination
 --------------------------------------------- */
 
 .pagination {
-	clear: both;
-	margin: 40px 0;
+  clear: both;
+  margin: 40px 0;
 }
 
 .adjacent-entry-pagination {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .archive-pagination li {
-	display: inline;
+  display: inline;
 }
 
 .archive-pagination li a {
-	@include susy-media( 0 $tablet) {
-		margin-bottom: 4px;
-	}
+  @include max-screen($tablet) {
+    margin-bottom: 4px;
+  }
 
-	display: inline-block;
-	padding: 8px 12px;
-	color: $white;
-	background-color: $dark-gray;
-	font-size: 16px;
-	cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+  color: $white;
+  background-color: $dark-gray;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .archive-pagination li a:hover,
 .archive-pagination .active a {
-	background-color: $base-accent-color;
+  background-color: $base-accent-color;
 }
 
 /* ## Comments
@@ -115,73 +115,71 @@ p.entry-meta {
 .comment-respond,
 .entry-comments,
 .entry-pings {
-	margin-bottom: 40px;
-	background-color: $white;
+  margin-bottom: 40px;
+  background-color: $white;
 }
 
 .comment-respond,
 .entry-pings {
-	@include susy-media( $tablet) {
-		padding: 40px 40px 16px;
-	}
+  @include min-screen($tablet) {
+    padding: 40px 40px 16px;
+  }
 
-	padding: 0;
+  padding: 0;
 }
 
 .entry-comments {
-	@include susy-media( $tablet) {
-		padding: 40px;
-	}
+  @include min-screen($tablet) {
+    padding: 40px;
+  }
 
-	padding: 0;
+  padding: 0;
 }
 
 .comment-header {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 li.comment {
-	border: 2px solid $white;
-	border-right: none;
-	background-color: $base-background-color;
+  border: 2px solid $white;
+  border-right: none;
+  background-color: $base-background-color;
 }
 
 .comment-content {
-	clear: both;
+  clear: both;
 }
 
 .comment-list li {
-	margin-top: 24px;
-	padding: 32px;
+  margin-top: 24px;
+  padding: 32px;
 }
 
 .comment-list li li {
-	margin-right: -32px;
+  margin-right: -32px;
 }
 
 .comment-respond input[type="email"],
 .comment-respond input[type="text"],
 .comment-respond input[type="url"] {
-	width: 50%;
+  width: 50%;
 }
 
 .comment-respond label {
-	display: block;
-	margin-right: 12px;
+  display: block;
+  margin-right: 12px;
 }
 
 .entry-comments .comment-author {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .entry-pings .reply {
-	display: none;
+  display: none;
 }
 
-
-
 .form-allowed-tags {
-	padding: 24px;
-	background-color: $base-background-color;
-	font-size: 16px;
+  padding: 24px;
+  background-color: $base-background-color;
+  font-size: 16px;
 }

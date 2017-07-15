@@ -2,31 +2,31 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 .sidebar li {
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px dotted $base-border-color;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted $base-border-color;
 }
 
 .sidebar p:last-child,
 .sidebar ul > li:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .sidebar .widget {
-	@include susy-media($tablet) {
-		padding: 40px;
-	}
+  @include min-screen($tablet) {
+    padding: 40px;
+  }
 
-	margin-bottom: 40px;
-	background-color: $white;
+  margin-bottom: 40px;
+  background-color: $white;
 }
 
 .sidebar .widget.enews-widget {
-	@include susy-media( 0 $tablet) {
-		padding: 40px;
-	}
+  @include max-screen($tablet) {
+    padding: 40px;
+  }
 }

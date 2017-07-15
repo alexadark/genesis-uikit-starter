@@ -2,58 +2,61 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	clear: both;
-	padding-top: 40px;
-	background-color: $dark-gray;
+  clear: both;
+  padding-top: 40px;
+  background-color: $dark-gray;
 }
 
 .footer-widgets,
 .footer-widgets a {
-	color: $medium-gray;
+  color: $medium-gray;
 }
 
 .footer-widgets input {
-	border: 1px solid $dark-gray;
+  border: 1px solid $dark-gray;
 }
 
 .footer-widgets a.button,
 .footer-widgets a:hover {
-	color: $white;
+  color: $white;
 }
 
 .footer-widgets li {
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px dotted lighten($dark-gray,30%);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted lighten($dark-gray, 30%);
 }
 
 .footer-widgets .widget {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .footer-widgets p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .footer-widgets {
-	.widget-area {
-		@include susy-media( $tablet) {
-			@include gallery(3);
-		}
-	}
+  @include clearfix;
+  .widget-area {
+    @include min-screen($tablet) {
+      float: left;
+      width: 25%;
+      
+    }
+  }
 }
 
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	padding: 40px 0;
-	background-color: $white;
-	font-size: 16px;
-	line-height: 1;
-	text-align: center;
+  padding: 40px 0;
+  background-color: $white;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
 }
 
 .site-footer p {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }

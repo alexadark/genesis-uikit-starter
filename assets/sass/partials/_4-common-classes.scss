@@ -30,7 +30,7 @@
 
 .archive-description,
 .author-box {
-	@include susy-media( $tablet) {
+	@include min-screen( $tablet) {
 		padding: 40px;
 	}
 

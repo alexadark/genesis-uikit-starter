@@ -2,119 +2,119 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	@include susy-media( 0 $tablet) {
-		padding: 0;
-	}
+  @include max-screen($tablet) {
+    padding: 0;
+  }
 
-	min-height: 110px;
-	background-color: $white;
-	.title-area {
-		@include susy-media( 0 $laptop) {
-			text-align: center;
-		}
-	}
+  min-height: 110px;
+  background-color: $white;
+  .title-area {
+    @include max-screen($laptop) {
+      text-align: center;
+    }
+  }
 }
 
 .site-header > .wrap {
-// 	@include susy-media( $laptop) {
-// 		padding: 40px 0;
-// 	}
+  // 	@include susy-media( $laptop) {
+  // 		padding: 40px 0;
+  // 	}
 
-	padding: 15px 0;
+  padding: 15px 0;
 }
 
 /* ## Title Area
 --------------------------------------------- */
 
 .title-area {
-	@include susy-media( $laptop) {
-		width: 300px;
-	}
-	@include susy-media( $desktop) {
-		width: 360px;
-	}
+  @include min-screen($laptop) {
+    width: 300px;
+  }
+  @include min-screen($desktop) {
+    width: 360px;
+  }
 
-	float: left;
-	width: 100%;
-	padding: 10px 0;
+  float: left;
+  width: 100%;
+  padding: 10px 0;
 }
 
 .header-full-width .title-area {
-	width: 100%;
+  width: 100%;
 }
 
 .site-title {
-	@include susy-media( 0 $laptop) {
-		text-align: center;
-	}
+  @include max-screen($laptop) {
+    text-align: center;
+  }
 
-	font-size: rem(25);
-	font-weight: 700;
-	line-height: 1.2;
+  font-size: rem(25);
+  font-weight: 700;
+  line-height: 1.2;
 
 }
 
 .site-title a,
 .site-title a:hover {
-	color: $dark-gray;
+  color: $dark-gray;
 }
 
 .header-image .site-title > a {
-	float: left;
-	width: 100%;
-	min-height: 60px;
-	background: url(../images/logo.png) no-repeat left;
+  float: left;
+  width: 100%;
+  min-height: 60px;
+  background: url(../images/logo.png) no-repeat left;
 }
 
 .site-description {
-	@include susy-media( 0 $laptop) {
-		text-align: center;
-	}
+  @include max-screen($laptop) {
+    text-align: center;
+  }
 
-	font-size: rem(16);
-	font-weight: 400;
-	line-height: 1.5;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .site-description,
 .site-title {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .header-image .site-description,
 .header-image .site-title {
-	display: block;
-	text-indent: -9999px;
+  display: block;
+  text-indent: -9999px;
 }
 
 .header-image .title-area {
-	@include susy-media( 0 $laptop) {
-		background-position: center top;
-	}
+  @include max-screen($laptop) {
+    background-position: center top;
+  }
 }
 
 /* ## Widget Area
 --------------------------------------------- */
 
 .site-header .widget-area {
-	@include susy-media( $laptop) {
-		width: 620px;
-	}
-	@include susy-media( $desktop) {
-		width: 800px;
-	}
+  @include min-screen($laptop) {
+    width: 620px;
+  }
+  @include min-screen($desktop) {
+    width: 800px;
+  }
 
-	float: right;
-	width: 100%;
-	text-align: right;
+  float: right;
+  width: 100%;
+  text-align: right;
 }
 
 .site-header .search-form {
-	@include susy-media( 0 $laptop) {
-		float: none;
-	}
-	@include susy-media( 0 $tablet) {
-		margin: 16px auto;
-		text-align: center;
-	}
+  @include max-screen($laptop) {
+    float: none;
+  }
+  @include max-screen($tablet) {
+    margin: 16px auto;
+    text-align: center;
+  }
 }

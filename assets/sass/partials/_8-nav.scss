@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .genesis-nav-menu {
-  @include susy-media(0 $laptop) {
+  @include max-screen( $laptop) {
     text-align: center;
   }
 
@@ -11,7 +11,7 @@
   font-size: 16px;
   line-height: 1;
   li {
-    @include susy-media(0 $laptop) {
+    @include max-screen($laptop) {
       float: none;
     }
   }
@@ -23,7 +23,7 @@
 }
 
 .genesis-nav-menu a {
-  @include susy-media($laptop) {
+  @include min-screen($laptop) {
     padding: 30px 24px;
   }
 
@@ -82,7 +82,7 @@
 }
 
 .genesis-nav-menu > .first > a {
-  @include susy-media(0 $laptop) {
+  @include max-screen( $laptop) {
     padding: 20px 16px;
   }
 
@@ -90,7 +90,7 @@
 }
 
 .genesis-nav-menu > .last > a {
-  @include susy-media(0 $laptop) {
+  @include max-screen( $laptop) {
     padding: 20px 16px;
   }
 
@@ -98,7 +98,7 @@
 }
 
 .genesis-nav-menu > .right {
-  @include susy-media(0 $laptop) {
+  @include max-screen( $laptop) {
     display: none;
   }
 
@@ -144,7 +144,7 @@
 --------------------------------------------- */
 .site-header {
   .genesis-nav-menu {
-    @include susy-media(0 $laptop) {
+    @include max-screen( $laptop) {
       float: none;
     }
   }

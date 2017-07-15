@@ -2,7 +2,7 @@
 --------------------------------------------- */
 
 body {
-  @include susy-media($tablet) {
+  @include min-screen($tablet) {
     background-color: $base-background-color;
     font-size: $base-font-size;
   }
