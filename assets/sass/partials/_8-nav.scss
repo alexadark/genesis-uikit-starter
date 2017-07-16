@@ -38,7 +38,7 @@
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: $base-accent-color;
+  color: $primary-color;
   text-decoration: none;
 }
 
@@ -182,7 +182,7 @@
 .nav-primary .genesis-nav-menu a:hover,
 .nav-primary .genesis-nav-menu .current-menu-item > a,
 .nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: $base-accent-color;
+  color: $primary-color;
 }
 
 /* ## Secondary Navigation

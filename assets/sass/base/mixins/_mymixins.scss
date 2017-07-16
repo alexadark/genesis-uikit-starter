@@ -1,4 +1,4 @@
-@mixin ghost-btn($padding:10px 30px, $color:$base-accent-color, $hover-color:$light) {
+@mixin ghost-btn($padding:10px 30px, $color:$primary-color, $hover-color:$light) {
 	border:2px solid $color;
 	padding:$padding;
 	text-align: center;
@@ -15,7 +15,7 @@
 
 }
 
-@mixin triangle($color:$base-accent-color){
+@mixin triangle($color:$primary-color){
 width: 0;
 height: 0;
 border-style: solid;

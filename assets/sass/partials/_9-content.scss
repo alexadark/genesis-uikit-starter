@@ -106,7 +106,7 @@ p.entry-meta {
 
 .archive-pagination li a:hover,
 .archive-pagination .active a {
-  background-color: $base-accent-color;
+  background-color: $primary-color;
 }
 
 /* ## Comments
@@ -143,7 +143,7 @@ p.entry-meta {
 li.comment {
   border: 2px solid $white;
   border-right: none;
-  background-color: $base-background-color;
+  background-color: $base-body-background;
 }
 
 .comment-content {
@@ -180,6 +180,6 @@ li.comment {
 
 .form-allowed-tags {
   padding: 24px;
-  background-color: $base-background-color;
+  background-color: $base-body-background;
   font-size: 16px;
 }

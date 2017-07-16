@@ -24,23 +24,23 @@ $blue: #2980b9;
 $pink: #D81B60;
 $dark-blue: #34495e;
 
-$base-accent-color: $pink;
-$base-font-color: $dark-gray;
+//$primary-color: $pink;
+//$base-font-color: $dark-gray;
 
 //
 // Typography
 //
 $sans-serif: helvetica, arial;
 $serif: georgia;
-$base-font-family:'Nunito Sans', sans-serif;
-$heading-font-family: 'Old Standard TT', serif;
-$base-body-font-family: $base-font-family;
+//$base-body-font-family:'Nunito Sans', sans-serif;
+//$heading-font-family: 'Old Standard TT', serif;
 
 
-$base-font-size: rem(16);
-$base-line-height:  1.5;
-$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
-$header-line-height: $base-font-size * 1.25;
+
+//$base-body-font-size: rem(16);
+//$base-body-line-height:  1.5;
+//$unitless-line-height: $global-line-height / ($global-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+//$header-line-height: $base-body-font-size * 1.25;
 $base-border-radius: 0;
 
 
@@ -48,34 +48,34 @@ $global-color:                                  $gray;
 $global-muted-color:                            $medium-gray;
 $global-text-shadow:                            $white;
 
-$global-link-color:                             $base-accent-color;
-$global-link-hover-color:                       darken($base-accent-color,20%);
+$global-link-color:                             $primary-color;
+$global-link-hover-color:                       darken($primary-color,20%);
 
 $global-contrast-color:                         $white;
 $global-contrast-text-shadow:                   rgba(0,0,0,0.1);
 
-$global-font-size:                              $base-font-size;
-$global-line-height:                            $base-line-height;
+$global-font-size:                              $base-body-font-size;
+$global-line-height:                            $base-body-line-height;
 
 
 
 
 
 // Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15%);
+$base-link-color: $primary-color;
+$hover-link-color: darken($primary-color, 15%);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
 //
 // Backgrounds
 //
-$base-background-color: $light;
+//$base-body-background: $light;
 
-$global-background:                             $white;
-$global-border:                                 $light-gray;
+//$global-background:                             $white;
+//$global-border:                                 $light-gray;
 
-$background-primary-background: $base-accent-color;
+//$background-primary-background: $primary-color;
 
 $global-border-radius:                          4px;
 
@@ -96,12 +96,12 @@ $base-border-color: $light-gray;
 // Forms
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
-$form-border-color-focus: $base-accent-color;
+$form-border-color-focus: $primary-color;
 $form-border-radius: $base-border-radius;
 $form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
-$form-font-size: $base-font-size;
-$form-font-family: $base-font-family;
+$form-font-size: $base-body-font-size;
+$form-font-family: $base-body-font-family;
 //
 // Spacings
 //
@@ -126,16 +126,3 @@ $global-z-index:                                1000;
 //
 //Breakpoints
 //
-$mobile: 480px;
-$tablet: 800px;
-$laptop: 960px;
-$desktop:1200px;
-
-$breakpoint-small:                               $mobile;
-$breakpoint-medium:                              $tablet;
-$breakpoint-large:                               $laptop;
-$breakpoint-xlarge:                              $desktop;
-$breakpoint-mini-max:                            ($breakpoint-small - 1) !default;
-$breakpoint-small-max:                           ($breakpoint-medium - 1) !default;
-$breakpoint-medium-max:                          ($breakpoint-large - 1) !default;
-$breakpoint-large-max:                          ($breakpoint-xlarge - 1);

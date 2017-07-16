@@ -6,23 +6,22 @@
 @import 'woocommerce/animation';
 @import 'woocommerce/fonts';
 
-
 //@import "woocommerce/woocommerce";
 
-.woocommerce{
-  .content{
+.woocommerce {
+  .content {
     background: $global-background;
     padding: 40px;
     margin-bottom: 40px;
+    box-sizing: border-box;
   }
 }
 
-.product.entry{
+.product.entry {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 
 .woocommerce .woocommerce-ordering select, .woocommerce div.product form.cart .variations select {
   -webkit-appearance: none;
@@ -36,16 +35,21 @@
   color: inherit;
   cursor: pointer;
   min-width: 136px;
-  width:200px;
+  width: 200px;
   float: right;
 
 }
-.woocommerce-result-count{
+
+.woocommerce-result-count {
   float: left;
   margin: 0;
 }
-.products{
+
+.products {
   clear: both;
+  margin: 0 0 1em;
+  padding: 0;
+  list-style: none;
 }
 
 select.orderby {
@@ -58,13 +62,12 @@ select.orderby {
 
 span.onsale {
 
-  background-color: $base-accent-color;
-  position:absolute;
-  color:$white;
+  background-color: $accent-color;
+  position: absolute;
+  color: $white;
   padding: 5px 10px;
   margin-left: -6px;
   margin-top: 20px;
-
 
   &:after {
     content: " ";
@@ -79,14 +82,13 @@ span.onsale {
   }
 }
 
-.woocommerce-loop-product__title{
+.woocommerce-loop-product__title {
   margin-top: 15px;
   margin-bottom: 5px;
   //text-align: center;
-  font-size:rem(22px);
+  font-size: rem(22px);
   font-style: italic;
 }
-
 
 /**
 	 * Star ratings
@@ -101,10 +103,11 @@ span.onsale {
   font-size: 10px;
   width: 5.4em;
   font-family: 'star';
+  color:$accent-color;
 
   &::before {
     content: '\73\73\73\73\73';
-    color: darken( $base-accent-color, 10% );
+    color: darken($accent-color, 10%);
     //float: left;
     top: 0;
     left: 0;
@@ -221,23 +224,3 @@ p.stars {
 }
 
 
-//test
-
-.media-queries{
-  margin-top: 20px;
-  border: 1px solid #ddd;
-  padding: 10px 30px;
-  background: blue;
-  color: #fff;
-  text-align: center;
-  @include screen($mobile,$tablet){
-    background: red;
-  }
-
-  @include min-screen($laptop){
-    background: olive;
-  }
-  @include iphone6-plus(landscape){
-    background: orange;
-  }
-}

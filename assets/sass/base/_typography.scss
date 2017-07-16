@@ -1,20 +1,20 @@
 /* ## Typographical Elements
 --------------------------------------------- */
 
-body {
-  @include min-screen($tablet) {
-    background-color: $base-background-color;
-    font-size: $base-font-size;
-  }
-
-  margin: 0;
-  color: $base-font-color;
-  background-color: $white;
-  font-family: $base-font-family;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: $unitless-line-height;
-}
+//body {
+//  @include min-screen($tablet) {
+//    background-color: $base-body-background;
+//    font-size: $base-body-font-size;
+//  }
+//
+//  margin: 0;
+//  color: $base-font-color;
+//  background-color: $white;
+//  font-family: $base-body-font-family;
+//  font-size: 16px;
+//  font-weight: 300;
+//  line-height: $base-body-line-height;
+//}
 
 a,
 button,
@@ -55,7 +55,7 @@ a {
 }
 
 hr {
-  margin: $base-line-height 0;
+  margin: $base-body-line-height 0;
   border-top: none;
   border-right: none;
   border-bottom: 1px solid $base-border-color;
@@ -109,38 +109,38 @@ blockquote::before {
 //h6,
 //.h1, .h2, .h3, .h4, .h5, .h6 {
 //  margin: 0 0 10px;
-//  color: $base-accent-color;
+//  color: $primary-color;
 //  font-family: $header-font-family;
 //  font-weight: 400;
 //  line-height: 1.2;
 //}
 //
 //h1, .h1 {
-//  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+//  font-size: $base-body-font-size * 2.25; // 16 * 2.25 = 36px
 //}
 //
 //h2, .h2 {
-//  font-size: $base-font-size * 2; // 16 * 2 = 32px
+//  font-size: $base-body-font-size * 2; // 16 * 2 = 32px
 //}
 //
 //h3, .h3 {
-//  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+//  font-size: $base-body-font-size * 1.75; // 16 * 1.75 = 28px
 //}
 //
 //h4, .h4 {
-//  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+//  font-size: $base-body-font-size * 1.5; // 16 * 1.5 = 24px
 //}
 //
 //h5, .h5 {
-//  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+//  font-size: $base-body-font-size * 1.25; // 16 * 1.25 = 20px
 //}
 //
 //h6, .h6 {
-//  font-size: $base-font-size;
+//  font-size: $base-body-font-size;
 //}
 //
 //p {
-//  margin: 0 0 ($base-line-height * 0.5);
+//  margin: 0 0 ($base-body-line-height * 0.5);
 //}
 
 /* ## Titles

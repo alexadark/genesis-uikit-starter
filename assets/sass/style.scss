@@ -19,22 +19,12 @@
 	Text Domain: developers
 */
 
-//@import "susy";
+
 @import "media-queries";
 
 @import "bourbon";
 
-//@import "partials/1-reset";
-//
-//@import "uikit/uikit-mixins";
-////
-////// theme variables and other custom stuff
-//@import "themes/default-theme/variables";
-//@import "themes/default-theme/styles/blue/_blue-variables";
-////@import "themes/default-theme/base";
-////
-//@import "uikit/uikit";
-//@import "uikit/components/autocomplete.scss";
+@import "settings";
 
 @import "uikit3/variables-theme.scss";
 @import "uikit3/mixins-theme.scss";
