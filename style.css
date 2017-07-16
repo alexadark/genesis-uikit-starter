@@ -10857,15 +10857,8 @@ li.comment {
 .footer-widgets p:last-child {
   margin-bottom: 0; }
 
-.footer-widgets::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-@media only screen and (min-width: 800px) {
-  .footer-widgets .widget-area {
-    float: left;
-    width: 25%; } }
+.flexible-widgets.uneven .widget:last-child {
+  width: 100%; }
 
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */

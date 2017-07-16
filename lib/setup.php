@@ -50,6 +50,11 @@ function wst_register_widget_areas() {
 			'name'        => __( 'Call to Action', CHILD_TEXT_DOMAIN ),
 			'description' => __( 'This is the Call to Action section on the home page.', CHILD_TEXT_DOMAIN ),
 		),
+		array(
+			'id'          => 'flex-footer',
+			'name'        => __( 'Flexible footer', CHILD_TEXT_DOMAIN ),
+			'description' => __( 'This is the footer widgets sectionz', CHILD_TEXT_DOMAIN ),
+		),
 	);
 
 	foreach ( $widget_areas as $widget_area ) {
@@ -86,7 +91,7 @@ function wst_add_theme_supports() {
 		),
 		'custom-background'               => null,
 		'genesis-after-entry-widget-area' => null,
-		'genesis-footer-widgets'          => 4,
+//		'genesis-footer-widgets'          => 1,
 		'genesis-menus'                   => array(
 			'primary'   => __( 'After Header Menu', CHILD_TEXT_DOMAIN ),
 			'secondary' => __( 'Footer Menu', CHILD_TEXT_DOMAIN )

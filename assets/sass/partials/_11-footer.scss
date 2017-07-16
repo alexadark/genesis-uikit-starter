@@ -35,16 +35,14 @@
   margin-bottom: 0;
 }
 
-.footer-widgets {
-  @include clearfix;
-  .widget-area {
-    @include min-screen($tablet) {
-      float: left;
-      width: 25%;
-      
+.flexible-widgets {
+  &.uneven {
+    .widget:last-child {
+      width: 100%;
     }
   }
 }
+
 
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
@@ -60,3 +58,7 @@
 .site-footer p {
   margin-bottom: 0;
 }
+
+
+
+
