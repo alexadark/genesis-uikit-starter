@@ -60,7 +60,7 @@
   position: relative;
   width: 200px;
   padding: 15px;
-  border: 1px solid $base-border-color;
+  border: 1px solid $global-border;
   border-top: none;
   background-color: $white;
   font-size: rem(14);
@@ -69,7 +69,7 @@
 
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -43px 0 0 199px;
-  border-top: 1px solid $base-border-color;
+  border-top: 1px solid $global-border;
 }
 
 .genesis-nav-menu .menu-item:hover {
@@ -151,7 +151,7 @@
 }
 
 .site-header .sub-menu {
-  border-top: 1px solid $base-border-color;
+  border-top: 1px solid $global-border;
 }
 
 .site-header .sub-menu .sub-menu {
@@ -167,7 +167,7 @@
 
 .nav-primary {
   background-color: $white;
-  border-top: 1px solid $base-border-color;
+  border-top: 1px solid $global-border;
 }
 
 .nav-primary .genesis-nav-menu a {
@@ -190,7 +190,7 @@
 
 .nav-secondary {
   background-color: $white;
-  border-bottom: 1px solid $base-border-color;
+  border-bottom: 1px solid $global-border;
   margin-bottom:40px;
 }
 

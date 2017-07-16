@@ -45,86 +45,15 @@ $button-text-border:                             $button-text-hover-color !defau
 // ========================================================================
 
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  @extend .uk-button;
+  @extend .uk-button-default;
+}
 
-// @mixin hook-button-hover(){}
-
-// @mixin hook-button-focus(){}
-
-// @mixin hook-button-active(){}
-
-
-// Style modifiers
-// ========================================================================
-
-
-
-
-
-
-
-//
-// Primary
-//
-
-
-
-// @mixin hook-button-primary-hover(){}
-
-// @mixin hook-button-primary-active(){}
-
-//
-// Secondary
-//
-
-
-
-// @mixin hook-button-secondary-hover(){}
-
-// @mixin hook-button-secondary-active(){}
-
-//
-// Danger
-//
-
-
-
-// @mixin hook-button-danger-hover(){}
-
-// @mixin hook-button-danger-active(){}
-
-
-// Disabled
-// ========================================================================
-
-
-
-
-// Size modifiers
-// ========================================================================
-
-// @mixin hook-button-small(){}
-
-// @mixin hook-button-large(){}
-
-
-// Text modifier
-// ========================================================================
-
-
-
-
-
-
-
-
-// Link modifier
-// ========================================================================
-
-// @mixin hook-button-link(){}
-
-
-// Miscellaneous
-// ========================================================================
 
 
 
@@ -146,18 +75,37 @@ $inverse-button-text-hover-color:               $inverse-global-emphasis-color !
 // Hooks
 //
 
+ @mixin hook-button(){
+  font-size: rem(11);
+   font-weight:bold;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color:$global-color;
+ }
+// @mixin hook-button-hover(){}
+// @mixin hook-button-focus(){}
+// @mixin hook-button-active(){}
+// @mixin hook-button-default(){}
+// @mixin hook-button-default-hover(){}
+// @mixin hook-button-default-active(){}
+// @mixin hook-button-primary(){}
+// @mixin hook-button-primary-hover(){}
+// @mixin hook-button-primary-active(){}
+// @mixin hook-button-secondary(){}
+// @mixin hook-button-secondary-hover(){}
+// @mixin hook-button-secondary-active(){}
+// @mixin hook-button-danger(){}
+// @mixin hook-button-danger-hover(){}
+// @mixin hook-button-danger-active(){}
+// @mixin hook-button-disabled(){}
+// @mixin hook-button-small(){}
+// @mixin hook-button-large(){}
+// @mixin hook-button-text(){}
+// @mixin hook-button-text-hover(){}
+// @mixin hook-button-text-disabled(){}
+// @mixin hook-button-link(){}
+// @mixin hook-button-misc(){}
 
 
 
 
-// @mixin hook-inverse-button-primary(){}
-// @mixin hook-inverse-button-primary-hover(){}
-// @mixin hook-inverse-button-primary-active(){}
-
-// @mixin hook-inverse-button-secondary(){}
-// @mixin hook-inverse-button-secondary-hover(){}
-// @mixin hook-inverse-button-secondary-active(){}
-
-
-// @mixin hook-inverse-button-text-hover(){}
-// @mixin hook-inverse-button-text-disabled(){}
