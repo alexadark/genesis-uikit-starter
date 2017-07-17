@@ -35,11 +35,12 @@
 /*--------------------------------------------------------------
 BASE
 --------------------------------------------------------------*/
-@import "base/base";
+// @import "base/base";
 
 //
 /*partials*/
-@import "partials/2-default";
+@import "partials/1-default";
+@import "partials/2-typo";
 @import "partials/3-structure";
 @import "partials/4-common-classes";
 @import "partials/5-widgets";

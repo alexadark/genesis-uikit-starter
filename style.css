@@ -18,6 +18,84 @@
 	License URI: http://www.opensource.org/licenses/gpl-license.php
 	Text Domain: developers
 */
+table {
+  width: 100%;
+  margin-bottom: 40px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  line-height: 2; }
+
+tbody {
+  border-bottom: 1px solid #DDD; }
+
+td,
+th {
+  text-align: left; }
+
+td {
+  padding: 6px 0;
+  border-top: 1px solid #DDD; }
+
+th {
+  font-weight: 400; }
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #DDD;
+  color: #333;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 300; }
+
+input:focus,
+textarea:focus {
+  border: 1px solid #999;
+  outline: none; }
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  width: auto; }
+
+::-moz-placeholder {
+  opacity: 1;
+  color: #333;
+  font-weight: 300; }
+
+::-webkit-input-placeholder {
+  color: #333;
+  font-weight: 300; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+  display: none; }
+
+/* ## Search Form
+--------------------------------------------- */
+.search-form {
+  overflow: hidden; }
+
+.site-header .search-form {
+  float: right;
+  margin-top: 12px; }
+
+.entry-content .search-form,
+.site-header .search-form {
+  width: 50%; }
+
+.genesis-nav-menu .search input[type="submit"],
+.widget_search input[type="submit"] {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -9677,8 +9755,9 @@ td.uk-text-break {
 /*--------------------------------------------------------------
 BASE
 --------------------------------------------------------------*/
-/* ## Typographical Elements
---------------------------------------------- */
+/*partials*/
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
 a,
 button,
 input:focus,
@@ -9748,113 +9827,6 @@ blockquote::before {
   font-size: 30px;
   content: "\201C"; }
 
-/* ## Titles
---------------------------------------------- */
-.archive-title {
-  font-size: 1.25rem; }
-
-.entry-title {
-  font-size: 2.25rem; }
-
-.entry-title a,
-.sidebar .widget-title a {
-  color: #21B7A6; }
-
-.entry-title a:hover {
-  color: #15766b; }
-
-.widget-title {
-  margin-bottom: 20px;
-  font-size: 18px; }
-
-.footer-widgets .widget-title {
-  color: #fff; }
-
-/* ## Forms
---------------------------------------------- */
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 16px;
-  border: 1px solid #DDD;
-  color: #333;
-  background-color: #fff;
-  font-size: 18px;
-  font-weight: 300; }
-
-input:focus,
-textarea:focus {
-  border: 1px solid #999;
-  outline: none; }
-
-input[type="checkbox"],
-input[type="image"],
-input[type="radio"] {
-  width: auto; }
-
-::-moz-placeholder {
-  opacity: 1;
-  color: #333;
-  font-weight: 300; }
-
-::-webkit-input-placeholder {
-  color: #333;
-  font-weight: 300; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button {
-  display: none; }
-
-/* ## Search Form
---------------------------------------------- */
-.search-form {
-  overflow: hidden; }
-
-.site-header .search-form {
-  float: right;
-  margin-top: 12px; }
-
-.entry-content .search-form,
-.site-header .search-form {
-  width: 50%; }
-
-.genesis-nav-menu .search input[type="submit"],
-.widget_search input[type="submit"] {
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0; }
-
-/* ## Tables
---------------------------------------------- */
-table {
-  width: 100%;
-  margin-bottom: 40px;
-  border-spacing: 0;
-  border-collapse: collapse;
-  line-height: 2; }
-
-tbody {
-  border-bottom: 1px solid #DDD; }
-
-td,
-th {
-  text-align: left; }
-
-td {
-  padding: 6px 0;
-  border-top: 1px solid #DDD; }
-
-th {
-  font-weight: 400; }
-
-/*partials*/
-/* # Defaults
----------------------------------------------------------------------------------------------------- */
 /* ## Objects
 --------------------------------------------- */
 embed,
@@ -9913,6 +9885,28 @@ img {
 
 .gallery img:hover {
   border: 1px solid #999; }
+
+/* ## Titles
+--------------------------------------------- */
+.archive-title {
+  font-size: 1.25rem; }
+
+.entry-title {
+  font-size: 2.25rem; }
+
+.entry-title a,
+.sidebar .widget-title a {
+  color: #21B7A6; }
+
+.entry-title a:hover {
+  color: #15766b; }
+
+.widget-title {
+  margin-bottom: 20px;
+  font-size: 18px; }
+
+.footer-widgets .widget-title {
+  color: #fff; }
 
 /* # Structure and Layout
 ---------------------------------------------------------------------------------------------------- */

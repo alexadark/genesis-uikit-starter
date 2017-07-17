@@ -53,7 +53,7 @@ function wst_register_widget_areas() {
 		array(
 			'id'          => 'flex-footer',
 			'name'        => __( 'Flexible footer', CHILD_TEXT_DOMAIN ),
-			'description' => __( 'This is the footer widgets sectionz', CHILD_TEXT_DOMAIN ),
+			'description' => __( 'This is the footer flexible widgets section', CHILD_TEXT_DOMAIN ),
 		),
 	);
 

@@ -49,6 +49,76 @@ $form-label-color:                               $global-emphasis-color !default
 $form-label-font-size:                           $global-small-font-size !default;
 
 
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid $global-border;
+  color: $dark-gray;
+  background-color: $white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid $medium-gray;
+  outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  width: auto;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: $dark-gray;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: $dark-gray;
+  font-weight: 300;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+  display: none;
+}
+
+
+/* ## Search Form
+--------------------------------------------- */
+
+.search-form {
+  overflow: hidden;
+}
+
+.site-header .search-form {
+  float: right;
+  margin-top: 12px;
+}
+
+.entry-content .search-form,
+.site-header .search-form {
+  width: 50%;
+}
+
+.genesis-nav-menu .search input[type="submit"],
+.widget_search input[type="submit"] {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+
 // Component
 // ========================================================================
 
