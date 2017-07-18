@@ -7,7 +7,6 @@
 @import 'woocommerce/fonts';
 
 //@import "woocommerce/woocommerce";
-
 .woocommerce {
   .content {
     background: $global-background;
@@ -17,10 +16,15 @@
   }
 }
 
-.product.entry {
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  margin: 0;
+  padding: 20px;
+  .button{
+    float: left;
+    //display: block;
+    clear: both;
+  }
+
 }
 
 .woocommerce .woocommerce-ordering select, .woocommerce div.product form.cart .variations select {
@@ -86,7 +90,7 @@ span.onsale {
   margin-top: 15px;
   margin-bottom: 5px;
   //text-align: center;
-  font-size: rem(22px);
+  font-size: rem(20px);
   font-style: italic;
 }
 
@@ -223,4 +227,13 @@ p.stars {
   }
 }
 
+.price{
+  font-size: $global-small-font-size;
+  float: left;
+}
+//.add_to_cart_button{
+//  float: left !important;
+//  display: inline-block;
+//  margin-top: 20px;
+//}
 

@@ -7,6 +7,8 @@
 // Variables
 // ========================================================================
 
+$button-border-width: 2px;
+
 $button-line-height:                             $global-control-height - ($button-border-width * 2) !default;
 $button-small-line-height:                       $global-control-small-height - ($button-border-width * 2) !default;
 $button-large-line-height:                       $global-control-large-height - ($button-border-width * 2) !default;
@@ -20,8 +22,12 @@ $button-default-active-background:               transparent !default;
 
 $button-disabled-background:                     transparent !default;
 
-$button-text-color:                              $global-emphasis-color !default;
-$button-text-hover-color:                        $global-emphasis-color !default;
+$button-text-color:                              $global-color!default;
+$button-text-hover-color:                        $global-color  ;
+
+
+
+
 
 //
 // New
@@ -29,16 +35,14 @@ $button-text-hover-color:                        $global-emphasis-color !default
 
 $button-text-transform:                          uppercase !default;
 
-$button-border-width:                            $global-border-width !default;
 
-$button-default-border:                          $global-border !default;
+$button-default-border:                          $black;
 $button-default-hover-border:                    darken($global-border, 20%) !default;
 $button-default-active-border:                   darken($global-border, 30%) !default;
 
 $button-disabled-border:                         $global-border !default;
 
-$button-text-border-width:                       $global-border-width !default;
-$button-text-border:                             $button-text-hover-color !default;
+$button-text-border:                             $black;
 
 
 // Component
@@ -52,6 +56,7 @@ input[type="submit"],
 .button {
   @extend .uk-button;
   @extend .uk-button-default;
+  
 }
 
 
@@ -80,7 +85,7 @@ $inverse-button-text-hover-color:               $inverse-global-emphasis-color !
    font-weight:bold;
    text-transform: uppercase;
    letter-spacing: 1px;
-   color:$global-color;
+   border:$button-border-width solid $black ;
  }
 // @mixin hook-button-hover(){}
 // @mixin hook-button-focus(){}
