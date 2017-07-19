@@ -812,7 +812,7 @@ a.uk-link-reset:hover,
   padding: 12px 12px; }
 
 .uk-list-striped > li:nth-of-type(odd) {
-  background: #a6efe7; }
+  background: #f4fdfc; }
 
 .uk-list-striped > li:nth-child(n+2) {
   margin-top: 0; }
@@ -969,7 +969,7 @@ a.uk-link-reset:hover,
  */
 .uk-table-striped > tr:nth-of-type(odd),
 .uk-table-striped tbody tr:nth-of-type(odd) {
-  background: #a6efe7; }
+  background: #f4fdfc; }
 
 /*
  * Hover
@@ -1152,7 +1152,7 @@ a.uk-link-reset:hover,
   width: 36px;
   height: 36px;
   border-radius: 500px;
-  background: #a6efe7;
+  background: #f4fdfc;
   color: #999;
   vertical-align: middle;
   /* 1 */
@@ -1172,14 +1172,14 @@ a.uk-link-reset:hover,
 /* Hover + Focus */
 .uk-icon-button:hover,
 .uk-icon-button:focus {
-  background-color: #90ebe1;
+  background-color: #def9f6;
   color: #2D3047;
   outline: none; }
 
 /* OnClick + Active */
 .uk-icon-button:active,
 .uk-active > .uk-icon-button {
-  background-color: #7be7db;
+  background-color: #c8f5f0;
   color: #2D3047; }
 
 /* ========================================================================
@@ -1289,29 +1289,29 @@ a.uk-link-reset:hover,
 /* Webkit */
 .uk-range::-webkit-slider-runnable-track {
   height: 3px;
-  background: #90ebe1; }
+  background: #def9f6; }
 
 .uk-range:focus::-webkit-slider-runnable-track,
 .uk-range:active::-webkit-slider-runnable-track {
-  background: #65e3d5; }
+  background: #b3f1ea; }
 
 /* Firefox */
 .uk-range::-moz-range-track {
   height: 3px;
-  background: #90ebe1; }
+  background: #def9f6; }
 
 .uk-range:focus::-moz-range-track {
-  background: #65e3d5; }
+  background: #b3f1ea; }
 
 /* Edge */
 .uk-range::-ms-fill-lower,
 .uk-range::-ms-fill-upper {
   height: 3px;
-  background: #90ebe1; }
+  background: #def9f6; }
 
 .uk-range:focus::-ms-fill-lower,
 .uk-range:focus::-ms-fill-upper {
-  background: #65e3d5; }
+  background: #b3f1ea; }
 
 /* ========================================================================
    Component: Form
@@ -1484,7 +1484,7 @@ a.uk-link-reset:hover,
 .uk-input:disabled,
 .uk-select:disabled,
 .uk-textarea:disabled {
-  background-color: #a6efe7;
+  background-color: #f4fdfc;
   color: #999; }
 
 /*
@@ -1677,7 +1677,7 @@ select.uk-form-width-xsmall {
  */
 .uk-radio:disabled,
 .uk-checkbox:disabled {
-  background-color: #a6efe7; }
+  background-color: #f4fdfc; }
 
 .uk-radio:disabled:checked {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%3E%3C%2Fcircle%3E%0A%3C%2Fsvg%3E"); }
@@ -2046,7 +2046,7 @@ input[type="submit"]:disabled,
 .uk-button-primary:disabled,
 .uk-button-secondary:disabled,
 .uk-button-danger:disabled {
-  background-color: #a6efe7;
+  background-color: #f4fdfc;
   color: #999; }
 
 /* Size modifiers
@@ -2216,7 +2216,7 @@ input[type="submit"]:disabled,
  * Muted
  */
 .uk-section-muted {
-  background: #a6efe7; }
+  background: #f4fdfc; }
 
 /*
  * Primary
@@ -2706,7 +2706,7 @@ input[type="submit"]:disabled,
  * Muted
  */
 .uk-tile-muted {
-  background: #a6efe7; }
+  background: #f4fdfc; }
 
 /*
  * Primary
@@ -2993,7 +2993,7 @@ input[type="submit"]:disabled,
   position: relative;
   margin-bottom: 24px;
   padding: 15px 29px 15px 15px;
-  background: #a6efe7;
+  background: #f4fdfc;
   color: #2D3047; }
 
 /* Add margin if adjacent element */
@@ -3724,7 +3724,7 @@ ul.uk-nav-sub {
 /* Container
  ========================================================================== */
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: #a6efe7; }
+  background: #f4fdfc; }
 
 /*
  * Remove pseudo elements created by micro clearfix as precaution (if Container component is used)
@@ -4155,12 +4155,12 @@ ul.uk-nav-sub {
 /* Hover + Focus */
 .uk-subnav-pill > * > a:hover,
 .uk-subnav-pill > * > a:focus {
-  background-color: #a6efe7;
+  background-color: #f4fdfc;
   color: #2D3047; }
 
 /* OnClick */
 .uk-subnav-pill > * > a:active {
-  background-color: #a6efe7;
+  background-color: #f4fdfc;
   color: #2D3047; }
 
 /* Active */
@@ -5324,7 +5324,7 @@ ul.uk-nav-sub {
   position: relative;
   margin-bottom: 10px;
   padding: 15px;
-  background: #a6efe7;
+  background: #f4fdfc;
   color: #2D3047;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -5450,7 +5450,7 @@ ul.uk-nav-sub {
   /* 3 */
   border: 0;
   /* 4 */
-  background-color: #a6efe7;
+  background-color: #f4fdfc;
   /* 5 */
   margin-bottom: 24px;
   height: 15px; }
@@ -5470,7 +5470,7 @@ ul.uk-nav-sub {
  * 2. Remove progress bar for indeterminate state in Firefox
  */
 .uk-progress::-webkit-progress-bar {
-  background-color: #a6efe7; }
+  background-color: #f4fdfc; }
 
 /* 2 */
 .uk-progress:indeterminate::-moz-progress-bar {
@@ -6987,7 +6987,7 @@ td.uk-text-break {
   background-color: #fff; }
 
 .uk-background-muted {
-  background-color: #a6efe7; }
+  background-color: #f4fdfc; }
 
 .uk-background-primary {
   background-color: #21B7A6; }
@@ -10884,6 +10884,9 @@ img.wp-smiley, img.emoji {
       .product_meta .posted_in a:hover {
         color: #21B7A6; }
 
+.woocommerce-tabs {
+  margin-bottom: 84px; }
+
 .wc-tabs {
   text-transform: uppercase;
   font-size: 11px;
@@ -10896,10 +10899,18 @@ img.wp-smiley, img.emoji {
     transition: all ease-in-out 0.2s; }
   .wc-tabs li {
     padding-left: 0;
-    margin: 0 10px; }
+    margin-left: 20px; }
   .wc-tabs .active a {
     color: #2D3047;
     font-weight: 600; }
   .wc-tabs .active .active-border {
     width: 100%; }
+
+.woocommerce-Tabs-panel {
+  background: #f5f5f5;
+  padding: 40px; }
+
+#reviews .commentlist li {
+  list-style-type: none;
+  margin-bottom: 24px; }
 /*# sourceMappingURL=style.css.map */

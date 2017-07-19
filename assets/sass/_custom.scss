@@ -389,10 +389,12 @@ img.wp-smiley, img.emoji {
 }
 
 //Tabs
+.woocommerce-tabs{
+  margin-bottom:$global-large-margin;
+}
 .wc-tabs{
   text-transform: uppercase;
   font-size: 11px;
-  //font-weight:bold;
   padding-bottom:$global-medium-margin;
   .active-border{
     height:1px;
@@ -403,7 +405,7 @@ img.wp-smiley, img.emoji {
 
   li{
     padding-left:0;
-    margin: 0 10px;
+    margin-left: 20px;
     a{
       //color:$global-muted-color;
     }
@@ -420,6 +422,21 @@ img.wp-smiley, img.emoji {
   }
 }
 
+.woocommerce-Tabs-panel{
+  background: $light;
+  padding: 40px;
+}
+
+//reviews
+#reviews .commentlist{
+  li{
+    list-style-type: none;
+    margin-bottom: $global-margin;
+    //padding: 20px 60px;
+    //border:1px solid $global-border;
+  }
+
+}
 
 
 
