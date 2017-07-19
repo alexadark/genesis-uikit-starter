@@ -183,9 +183,12 @@ add_action( 'woocommerce_before_single_product_summary', 'wst_open_grid_single_p
  * @return void
  */
 function wst_open_grid_single_product() {
-	echo '<div class="uk-child-width-1-2@m" uk-grid>';
+	echo '<div class="product-wrapper" uk-grid>';
 
 }
+
+
+
 
 add_action( 'woocommerce_after_single_product_summary', 'wst_close_grid_single_product', 5 );
 /**
@@ -196,6 +199,32 @@ add_action( 'woocommerce_after_single_product_summary', 'wst_close_grid_single_p
  * @return void
  */
 function wst_close_grid_single_product() {
+	echo '</div>';
+
+}
+
+add_action( 'woocommerce_before_single_product_summary', 'wst_wrap_wc_summary_in_uikit_class', 25 );
+/**
+ * wrap single product summary in uikit class.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function wst_wrap_wc_summary_in_uikit_class() {
+	echo '<div class="uk-width-1-2@l">';
+
+}
+
+add_action( 'woocommerce_after_single_product_summary', 'wst_close_summary_wrap', 5 );
+/**
+ * Close the grid wrap.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function wst_close_summary_wrap() {
 	echo '</div>';
 
 }

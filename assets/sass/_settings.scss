@@ -71,7 +71,7 @@ $global-small-font-size: rem(14); //h6
 
 $global-color: $secondary-color;
 $global-emphasis-color: $accent-color;
-$global-muted-color: lighten($secondary-color, 10%);
+$global-muted-color: $medium-gray;
 
 $global-link-color: $primary-color;
 $global-link-hover-color: darken($primary-color, 15%);

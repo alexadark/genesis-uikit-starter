@@ -12,7 +12,7 @@
     background: $global-background;
     margin-bottom: 40px;
     box-sizing: border-box;
-    @include min-screen($tablet){
+    @include min-screen($tablet) {
       padding: 40px;
     }
   }
@@ -21,7 +21,7 @@
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   margin: 0;
   padding: 20px;
-  .button{
+  .button {
     float: left;
     clear: both;
     margin-top: 15px;
@@ -75,7 +75,7 @@ span.onsale {
   margin-left: -6px;
   margin-top: 20px;
   z-index: 1000;
-  .single-product &{
+  .single-product & {
     margin-top: 40px;
   }
 
@@ -113,7 +113,7 @@ span.onsale {
   font-size: 10px;
   width: 5.4em;
   font-family: 'star';
-  color:$accent-color;
+  color: $accent-color;
 
   &::before {
     content: '\73\73\73\73\73';
@@ -233,20 +233,22 @@ p.stars {
   }
 }
 
-.price{
+.price {
   font-size: $global-small-font-size;
-  float: left;
   color: $global-color;
+  .woocommerce.archive &{
+    float: left;
+  }
 }
 
 //pagination
-.woocommerce-pagination{
+.woocommerce-pagination {
   @extend .archive-pagination;
   @extend .pagination;
-  .current{
+  .current {
     background: $primary-color;
     padding: 8px 12px;
-    color:$white;
+    color: $white;
 
   }
 
@@ -254,7 +256,7 @@ p.stars {
 
 //single products images
 
-.woocommerce-product-gallery{
+.woocommerce-product-gallery {
   position: relative;
 }
 
@@ -271,7 +273,7 @@ p.stars {
   text-indent: -9999px;
   border-radius: 100%;
   box-sizing: content-box;
-  &:before{
+  &:before {
     content: "";
     display: block;
     width: 10px;
@@ -323,7 +325,6 @@ img.wp-smiley, img.emoji {
     margin: 0;
     list-style: none;
 
-
     img {
       cursor: pointer;
       opacity: .5;
@@ -337,5 +338,48 @@ img.wp-smiley, img.emoji {
     }
   }
 }
+
+//review link
+.woocommerce-review-link {
+  font-size: $base-small-font-size;
+  color: $global-color;
+  font-style: italic;
+  position: relative;
+  font-family:$base-heading-font-family;
+  top: -7px;
+  margin-left: 10px;
+  &:hover {
+    color: $base-link-hover-color;
+  }
+}
+
+.woocommerce .quantity .qty{
+  width: 50px;
+  text-align: center;
+  float: left;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.woocommerce-product-details__short-description{
+  text-align: justify;
+}
+
+.product_meta{
+  clear: both;
+  margin-top: 20px;
+  .posted_in{
+    font-style:italic;
+    font-family:$base-heading-font-family;
+    a{
+      color: $global-color;
+      &:hover{
+        color:$primary-color;
+      }
+    }
+  }
+
+}
+
 
 
