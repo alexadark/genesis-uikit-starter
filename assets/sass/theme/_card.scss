@@ -47,7 +47,9 @@ $card-secondary-hover-box-shadow:               $global-large-box-shadow !defaul
 // Sections
 // ========================================================================
 
-// @mixin hook-card-body(){}
+ @mixin hook-card-body(){
+   box-shadow: $global-medium-box-shadow;
+ }
 
 // @mixin hook-card-header(){}
 

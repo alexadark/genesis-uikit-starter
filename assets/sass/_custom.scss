@@ -113,11 +113,11 @@ span.onsale {
   font-size: 10px;
   width: 5.4em;
   font-family: 'star';
-  color: $accent-color;
+  color: $global-color;
 
   &::before {
     content: '\73\73\73\73\73';
-    color: darken($accent-color, 10%);
+    color: darken($global-color, 10%);
     //float: left;
     top: 0;
     left: 0;
@@ -162,28 +162,6 @@ span.onsale {
   margin: 10px 0 0;
 }
 
-#review_form #respond {
-  @include clearfix();
-  position: static;
-  margin: 0;
-  width: auto;
-  padding: 0;
-  background: transparent none;
-  border: 0;
-
-  p {
-    margin: 0 0 10px;
-  }
-
-  .form-submit input {
-    left: auto;
-  }
-
-  textarea {
-    box-sizing: border-box;
-    width: 100%;
-  }
-}
 
 p.stars {
   a {
@@ -238,7 +216,7 @@ p.stars {
   color: $global-color;
   float: left;
 
-  .single-product .summary &{
+  .single-product .summary & {
     float: none;
   }
 }
@@ -257,8 +235,8 @@ p.stars {
 }
 
 /* Single Products */
-.product-wrapper{
-  margin-bottom:$global-large-margin;
+.product-wrapper {
+  margin-bottom: $global-large-margin;
 }
 
 //single products images
@@ -352,7 +330,7 @@ img.wp-smiley, img.emoji {
   color: $global-color;
   font-style: italic;
   position: relative;
-  font-family:$base-heading-font-family;
+  font-family: $base-heading-font-family;
   top: -7px;
   margin-left: 10px;
   &:hover {
@@ -360,7 +338,7 @@ img.wp-smiley, img.emoji {
   }
 }
 
-.woocommerce .quantity .qty{
+.woocommerce .quantity .qty {
   width: 50px;
   text-align: center;
   float: left;
@@ -368,20 +346,20 @@ img.wp-smiley, img.emoji {
   margin-right: 10px;
 }
 
-.woocommerce-product-details__short-description{
+.woocommerce-product-details__short-description {
   text-align: justify;
 }
 
-.product_meta{
+.product_meta {
   clear: both;
   margin-top: 20px;
-  .posted_in{
-    font-style:italic;
-    font-family:$base-heading-font-family;
-    a{
+  .posted_in {
+    font-style: italic;
+    font-family: $base-heading-font-family;
+    a {
       color: $global-color;
-      &:hover{
-        color:$primary-color;
+      &:hover {
+        color: $primary-color;
       }
     }
   }
@@ -389,54 +367,101 @@ img.wp-smiley, img.emoji {
 }
 
 //Tabs
-.woocommerce-tabs{
-  margin-bottom:$global-large-margin;
+.woocommerce-tabs {
+  margin-bottom: $global-large-margin;
 }
-.wc-tabs{
+
+.wc-tabs {
   text-transform: uppercase;
   font-size: 11px;
-  padding-bottom:$global-medium-margin;
-  .active-border{
-    height:1px;
+  padding-bottom: $global-medium-margin;
+  .active-border {
+    height: 1px;
     background: $primary-color;
     width: 0;
     @include transition;
   }
 
-  li{
-    padding-left:0;
+  li {
+    padding-left: 0;
     margin-left: 20px;
-    a{
+    a {
       //color:$global-muted-color;
     }
   }
-  .active{
+  .active {
     //border-bottom: 1px solid $primary-color;
-    a{
-      color:$global-color;
+    a {
+      color: $global-color;
       font-weight: 600;
     }
-    .active-border{
+    .active-border {
       width: 100%;
     }
   }
 }
 
-.woocommerce-Tabs-panel{
+.woocommerce-Tabs-panel {
   background: $light;
-  padding: 40px;
-}
-
-//reviews
-#reviews .commentlist{
-  li{
-    list-style-type: none;
-    margin-bottom: $global-margin;
-    //padding: 20px 60px;
-    //border:1px solid $global-border;
+  padding: 20px;
+  @include min-screen($tablet) {
+    padding: 40px;
   }
 
 }
+
+//reviews
+#reviews .commentlist {
+  margin-left: 0;
+  li {
+    list-style-type: none;
+    margin-bottom: $global-margin;
+
+    @extend .uk-card;
+    @extend .uk-card-body;
+    .meta {
+      margin: 10px 0 5px;
+      font-family: $global-heading-font-family;
+      font-style: italic;
+      font-size: $global-small-font-size
+    }
+  }
+
+}
+
+p.stars a{
+  color: $global-color;
+  font-size:12px;
+}
+
+#review_form #respond {
+  @include clearfix();
+  position: static;
+  margin: 0;
+  width: auto;
+  padding: 0;
+  background: transparent none;
+  border: 0;
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  .form-submit input {
+    left: auto;
+  }
+
+  textarea {
+    box-sizing: border-box;
+    width: 80%;
+  }
+  .submit{
+    width: 200px;
+    margin-top: $global-margin;
+  }
+}
+
+
 
 
 
