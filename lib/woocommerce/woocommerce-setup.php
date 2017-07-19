@@ -53,11 +53,9 @@ function genesis_sample_woocommerce_breakpoint() {
 
 	if ( in_array( $current, $layouts['two-sidebar'] ) ) {
 		return '2000px'; // Show mobile styles immediately.
-	}
-	elseif ( in_array( $current, $layouts['one-sidebar'] ) ) {
+	} elseif ( in_array( $current, $layouts['one-sidebar'] ) ) {
 		return '1200px';
-	}
-	else {
+	} else {
 		return '860px';
 	}
 
@@ -75,7 +73,7 @@ function genesis_sample_default_products_per_page() {
 	return 8;
 }
 
-add_filter( 'woocommerce_pagination_args', 	'genesis_sample_woocommerce_pagination' );
+add_filter( 'woocommerce_pagination_args', 'genesis_sample_woocommerce_pagination' );
 /**
  * Update the next and previous arrows to the default Genesis style.
  *
@@ -94,10 +92,10 @@ function genesis_sample_woocommerce_pagination( $args ) {
 
 add_action( 'after_switch_theme', 'genesis_sample_woocommerce_image_dimensions_after_theme_setup', 1 );
 /**
-* Define WooCommerce image sizes on theme activation.
-*
-* @since 2.3.0
-*/
+ * Define WooCommerce image sizes on theme activation.
+ *
+ * @since 2.3.0
+ */
 function genesis_sample_woocommerce_image_dimensions_after_theme_setup() {
 
 	global $pagenow;
@@ -134,12 +132,12 @@ function genesis_sample_woocommerce_image_dimensions_after_woo_activation( $plug
  */
 function genesis_sample_update_woocommerce_image_dimensions() {
 
-	$catalog = array(
+	$catalog   = array(
 		'width'  => '500', // px
 		'height' => '500', // px
 		'crop'   => 1,     // true
 	);
-	$single = array(
+	$single    = array(
 		'width'  => '655', // px
 		'height' => '655', // px
 		'crop'   => 1,     // true
@@ -154,5 +152,50 @@ function genesis_sample_update_woocommerce_image_dimensions() {
 	update_option( 'shop_catalog_image_size', $catalog );     // Product category thumbs.
 	update_option( 'shop_single_image_size', $single );       // Single product image.
 	update_option( 'shop_thumbnail_image_size', $thumbnail ); // Image gallery thumbs.
+
+}
+
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+
+add_filter( 'genesis_site_layout', 'wst_wc_single_fw' );
+/**
+ * Force layout to full width for single products.
+ *
+ * @since 1.0.0
+ *
+ * @return string
+ */
+function wst_wc_single_fw() {
+	if ( 'product' == get_post_type() && is_single() ) {
+		return 'full-width-content';
+	}
+}
+
+add_action( 'woocommerce_before_single_product_summary', 'wst_open_grid_single_product', 15 );
+/**
+ * wrap single product images and summary in a div with uikit classes to display it in two columns.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function wst_open_grid_single_product() {
+	echo '<div class="uk-child-width-1-2@m" uk-grid>';
+
+}
+
+add_action( 'woocommerce_after_single_product_summary', 'wst_close_grid_single_product', 5 );
+/**
+ * Close the grid wrap.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function wst_close_grid_single_product() {
+	echo '</div>';
 
 }

@@ -31,9 +31,9 @@ $bg-lighten-color: lighten($primary-color, 37%);
 $max-width: 1200px;
 
 $mobile: 480px;
-$tablet: 800px;
-$laptop: 960px;
-$desktop: 1200px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1240px;
 
 $breakpoint-small: $mobile;
 $breakpoint-medium: $tablet;

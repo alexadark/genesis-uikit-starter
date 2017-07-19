@@ -10,9 +10,11 @@
 .woocommerce {
   .content {
     background: $global-background;
-    padding: 40px;
     margin-bottom: 40px;
     box-sizing: border-box;
+    @include min-screen($tablet){
+      padding: 40px;
+    }
   }
 }
 
@@ -21,8 +23,8 @@
   padding: 20px;
   .button{
     float: left;
-    //display: block;
     clear: both;
+    margin-top: 15px;
   }
 
 }
@@ -72,6 +74,10 @@ span.onsale {
   padding: 5px 10px;
   margin-left: -6px;
   margin-top: 20px;
+  z-index: 1000;
+  .single-product &{
+    margin-top: 40px;
+  }
 
   &:after {
     content: " ";
@@ -230,10 +236,106 @@ p.stars {
 .price{
   font-size: $global-small-font-size;
   float: left;
+  color: $global-color;
 }
-//.add_to_cart_button{
-//  float: left !important;
-//  display: inline-block;
-//  margin-top: 20px;
-//}
+
+//pagination
+.woocommerce-pagination{
+  @extend .archive-pagination;
+  @extend .pagination;
+  .current{
+    background: $primary-color;
+    padding: 8px 12px;
+    color:$white;
+
+  }
+
+}
+
+//single products images
+
+.woocommerce-product-gallery{
+  position: relative;
+}
+
+//lightbox trigger
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  font-size: 2em;
+  z-index: 9;
+  width: 36px;
+  height: 36px;
+  background: $white;
+  text-indent: -9999px;
+  border-radius: 100%;
+  box-sizing: content-box;
+  &:before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    box-sizing: content-box;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #000;
+    border-radius: 6px;
+    position: absolute;
+    top: 19px;
+    left: 22px;
+    transform: rotate(-45deg);
+    box-sizing: content-box;
+  }
+}
+
+img.wp-smiley, img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+//Thumbs slider
+.flex-control-thumbs {
+  overflow: hidden;
+  zoom: 1;
+  margin: 10px 0 0 0;
+  padding: 0;
+
+  li {
+    width: 20%;
+    float: left;
+    margin: 0;
+    list-style: none;
+
+
+    img {
+      cursor: pointer;
+      opacity: .5;
+      margin: 0;
+      @include transition;
+
+      &.flex-active,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 

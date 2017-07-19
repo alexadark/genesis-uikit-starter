@@ -92,6 +92,7 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
+  @include transition;
   @include max-screen($tablet) {
     margin-bottom: 4px;
   }
