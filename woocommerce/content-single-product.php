@@ -69,6 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- .summary -->
 </div>
 
+
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.

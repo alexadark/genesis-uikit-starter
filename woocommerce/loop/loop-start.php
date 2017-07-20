@@ -16,5 +16,5 @@
  * @version     2.0.0
  */
 ?>
-    <ul class="products uk-child-width-1-3@l uk-child-width-1-2@m"
+    <ul class="products uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m"
         uk-grid>

@@ -199,6 +199,7 @@ add_action( 'woocommerce_after_single_product_summary', 'wst_close_grid_single_p
  * @return void
  */
 function wst_close_grid_single_product() {
+
 	echo '</div>';
 
 }

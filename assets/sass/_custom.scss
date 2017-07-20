@@ -25,6 +25,9 @@
     float: left;
     clear: both;
     margin-top: 15px;
+    display:block;
+    flex:initial;
+    width: auto;
   }
 
 }
@@ -87,7 +90,7 @@ span.onsale {
     border-left-color: black;
     transform: rotate(-45deg);
     left: 2px;
-    top: calc(2em - 0.38em);
+    top: 30px;
     border-radius: 0;
   }
 }
@@ -227,7 +230,7 @@ p.stars {
   @extend .pagination;
   .current {
     background: $primary-color;
-    padding: 8px 12px;
+    padding: 10px 12px;
     color: $white;
 
   }
@@ -459,6 +462,12 @@ p.stars a{
     width: 200px;
     margin-top: $global-margin;
   }
+}
+
+.spacer{
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid $global-color;
 }
 
 
