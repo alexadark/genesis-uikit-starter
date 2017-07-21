@@ -28,7 +28,7 @@ $base-small-font-size:                           80% ;
 $base-margin-vertical:                           $global-margin ;
 
 $base-heading-font-family:                       $global-heading-font-family;;
-$base-heading-font-weight:                       normal ;
+$base-heading-font-weight:                       300 ;
 $base-heading-color:                             $global-color ;
 $base-heading-text-transform:                    none ;
 $base-heading-margin-top:                        $global-medium-margin ;
@@ -97,7 +97,6 @@ $base-pre-border-radius:                         3px ;
    background: $base-body-background;
    box-sizing: border-box;
    @include min-screen($tablet){
-     font-size:100%;
      background: $light;
     }
 
@@ -123,6 +122,10 @@ $base-pre-border-radius:                         3px ;
 
  @mixin hook-base-heading(){
    font-family: $base-heading-font-family;
+   font-weight:light;
+   a{
+     color:$global-color;
+   }
  }
 
  @mixin hook-base-h1(){

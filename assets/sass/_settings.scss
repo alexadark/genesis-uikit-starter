@@ -13,9 +13,9 @@ $light-gray: #DDD;
 $medium-gray: #999;
 $dark-gray: #333;
 
-$primary-color: #21B7A6;
+$accent-color: #e91e63;
+$primary-color: $accent-color;
 $secondary-color: #2D3047;
-$accent-color: #E83C4A;
 $bg-color: $white;
 $bg-darken-color: darken($bg-color, 3%);
 $bg-lighten-color: lighten($primary-color, 55%);
@@ -54,9 +54,9 @@ $breakpoint-large-max: ($breakpoint-xlarge - 1);
 $sans-serif: helvetica, arial;
 $serif: georgia;
 
-$global-font-family: 'Nunito Sans', sans-serif;
-$global-heading-font-family: 'Old Standard TT', serif;
-$global-font-size: rem(16);
+$global-font-family: 'Raleway', sans-serif;
+$global-heading-font-family: 'Raleway', sans-serif;
+$global-font-size: rem(18);
 $global-line-height: 1.66;
 
 $global-xxlarge-font-size: rem(42); //h1
@@ -69,12 +69,12 @@ $global-small-font-size: rem(14); //h6
 // Colors
 //
 
-$global-color: $secondary-color;
+$global-color: $dark-gray;
 $global-emphasis-color: $accent-color;
 $global-muted-color: $medium-gray;
 
-$global-link-color: $primary-color;
-$global-link-hover-color: darken($primary-color, 15%);
+$global-link-color: $accent-color;
+$global-link-hover-color: darken($accent-color, 15%);
 
 $global-inverse-color: $white;
 $inverse-global-muted-color: rgba($global-inverse-color, 0.5) !default;

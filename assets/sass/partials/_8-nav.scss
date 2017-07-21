@@ -30,7 +30,10 @@
   display: block;
   padding: 20px 16px;
   color: $dark-gray;
-  font-weight: 600;
+  text-transform: uppercase;
+  font-size: rem(11);
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .genesis-nav-menu a:focus,
@@ -63,7 +66,7 @@
   border: 1px solid $global-border;
   border-top: none;
   background-color: $white;
-  font-size: rem(14);
+  font-size: rem(10);
   word-wrap: break-word;
 }
 
@@ -355,6 +358,7 @@
   .menu-toggle:focus,
   .menu-toggle:hover {
     border-top: 1px solid #eee;
+    padding: 15px 0;
   }
 
   .menu-toggle::before {

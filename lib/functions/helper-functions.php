@@ -52,3 +52,4 @@ function wst_widget_area_class( $id ) {
 	return $class;
 
 }
+
