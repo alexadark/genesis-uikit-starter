@@ -20,7 +20,7 @@ $tab-margin-horizontal:                   20px !default;
 
 $tab-item-padding-horizontal:             10px !default;
 $tab-item-padding-vertical:               5px !default;
-$tab-item-color:                          $global-color;
+$tab-item-color:                          $global-muted-color !default;
 $tab-item-hover-color:                    $global-color !default;
 $tab-item-hover-text-decoration:          none !default;
 $tab-item-active-color:                   $global-emphasis-color !default;

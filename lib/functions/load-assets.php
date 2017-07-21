@@ -18,11 +18,11 @@ function wst_enqueue_scripts_styles() {
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-	wp_enqueue_script( 'uikit-js', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js', array( 'jquery' ), '3.0.0-beta.25', true );
+	wp_enqueue_script( 'uikit-js', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.27/js/uikit.min.js', array( 'jquery' ), '3.0.0-beta.27', true );
 
-	wp_enqueue_script('uikit-icons-js', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit-icons.min.js',
+	wp_enqueue_script('uikit-icons-js', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.27/js/uikit-icons.min.js',
 		array( 'uikit-js' ),
-		'3.0.0-beta.25', true);
+		'3.0.0-beta.27', true);
 wp_enqueue_script('theme-js',CHILD_JS. 'theme.js'. array('jquery'), CHILD_THEME_VERSION, true);
 
 	wp_enqueue_script( 'genesis-sample-responsive-menu', CHILD_JS . "responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );

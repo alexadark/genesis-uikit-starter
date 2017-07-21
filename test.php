@@ -94,6 +94,77 @@ function wst_test_uikit() {
 	<div class="media-queries">Test</div>
 
 
+    <h1>lightbox</h1>
+
+    <div uk-lightbox>
+        <a class="uk-button uk-button-default" href="https://getuikit.com/docs/images/photo.jpg">Open Lightbox</a>
+    </div>
+
+    <div class="uk-h3">Slide</div>
+    <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: slide">
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/photo.jpg" caption="Caption 1">
+                <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/dark.jpg" caption="Caption 2">
+                <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/light.jpg" caption="Caption 3">
+                <img src="https://getuikit.com/docs/images/light.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="uk-h3">Fade</div>
+    <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade">
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/photo.jpg" caption="Caption 1">
+                <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/dark.jpg" caption="Caption 2">
+                <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/light.jpg" caption="Caption 3">
+                <img src="https://getuikit.com/docs/images/light.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="uk-h3">Scale</div>
+    <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: scale">
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/photo.jpg" caption="Caption 1">
+                <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/dark.jpg" caption="Caption 2">
+                <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://getuikit.com/docs/images/light.jpg" caption="Caption 3">
+                <img src="https://getuikit.com/docs/images/light.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="uk-margin-large" uk-lightbox>
+        <a class="uk-button uk-button-default" href="https://getuikit.com/docs/images/photo.jpg" caption="Image">Image</a>
+        <a class="uk-button uk-button-default" href="//www.quirksmode.org/html5/videos/big_buck_bunny.mp4" caption="Video">Video</a>
+        <a class="uk-button uk-button-default" href="//www.youtube.com/watch?v=YE7VzlLtp-4" caption="YouTube">YouTube</a>
+        <a class="uk-button uk-button-default" href="//vimeo.com/1084537" caption="Vimeo">Vimeo</a>
+    </div>
+
 
 <?php }
 
