@@ -1,6 +1,7 @@
 <?php
 /**
  * Post structure
+ *
  * @since       1.0.0
  * @author      alexaspalato
  * @link        https://alexaspalato

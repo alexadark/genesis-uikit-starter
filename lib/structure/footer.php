@@ -2,7 +2,6 @@
 /**
  * Footer HTML markup structure
  *
- *
  * @since       1.0.0
  * @author      alexspalato
  * @link        https://alexandraspalato.com

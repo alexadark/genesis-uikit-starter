@@ -169,7 +169,7 @@ add_filter( 'genesis_site_layout', 'wst_wc_single_fw' );
  * @return string
  */
 function wst_wc_single_fw() {
-	if ( 'product' == get_post_type() && is_single() ) {
+	if ( 'product' == get_post_type() && is_single() || is_cart() ) {
 		return 'full-width-content';
 	}
 }

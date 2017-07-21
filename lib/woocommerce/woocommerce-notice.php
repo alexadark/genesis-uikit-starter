@@ -66,7 +66,7 @@ function genesis_sample_woocommerce_theme_notice() {
 			'install-plugin_' . $plugin_slug
 		), __( 'install and activate Genesis Connect for WooCommerce', 'genesis-sample' ) );
 
-		$notice_html = sprintf( __( 'Please %s to <strong>enable WooCommerce support for %s</strong>.', 'genesis-sample' ), $install_link, esc_html( CHILD_THEME_NAME ) );
+		$notice_html = sprintf( __( 'Please %1$s to <strong>enable WooCommerce support for %2$s</strong>.', 'genesis-sample' ), $install_link, esc_html( CHILD_THEME_NAME ) );
 	}
 
 	echo '<div class="notice notice-info is-dismissible genesis-sample-woocommerce-notice"><p>' . $notice_html . '</p></div>';
@@ -90,7 +90,7 @@ add_action( 'admin_enqueue_scripts', 'genesis_sample_notice_script' );
  * @since 2.3.0
  */
 function genesis_sample_notice_script() {
-	wp_enqueue_script( 'genesis_sample_notice_script', get_stylesheet_directory_uri() . '/lib/woocommerce/js/notice-update.js', array( 'jquery' ), '1.0', true  );
+	wp_enqueue_script( 'genesis_sample_notice_script', get_stylesheet_directory_uri() . '/lib/woocommerce/js/notice-update.js', array( 'jquery' ), '1.0', true );
 }
 
 add_action( 'switch_theme', 'genesis_sample_reset_woocommerce_notice', 10, 2 );
@@ -121,13 +121,13 @@ add_action( 'deactivated_plugin', 'genesis_sample_reset_woocommerce_notice_on_de
  *
  * @since 2.3.0
  *
- * @param string $plugin The plugin slug.
+ * @param string             $plugin The plugin slug.
  * @param $network_activation.
  */
 function genesis_sample_reset_woocommerce_notice_on_deactivation( $plugin, $network_activation ) {
 
 	// Conditional check to see if we're deactivating WooCommerce or Genesis Connect for WooCommerce.
-	if ( $plugin !== 'woocommerce/woocommerce.php' && $plugin !== 'genesis-connect-woocommerce/genesis-connect-woocommerce.php'  ) {
+	if ( $plugin !== 'woocommerce/woocommerce.php' && $plugin !== 'genesis-connect-woocommerce/genesis-connect-woocommerce.php' ) {
 		return;
 	}
 

@@ -7,12 +7,23 @@
 // Variables
 // ========================================================================
 
+$article-meta-color:                             $global-muted-color !default;
+
+$article-margin-top:                             $global-large-margin !default;
+
+$article-title-font-size:                        $global-xxlarge-font-size !default;
+$article-title-line-height:                      1.2 !default;
+
+$article-meta-font-size:                         $global-small-font-size !default;
+$article-meta-line-height:                       1.4 !default;
+
 //
 // New
 //
 
 $article-meta-link-color:                        $article-meta-color !default;
 $article-meta-link-hover-color:                  $global-color !default;
+
 
 
 // Component

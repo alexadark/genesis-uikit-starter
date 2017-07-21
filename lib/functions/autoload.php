@@ -21,23 +21,23 @@ function wst_load_nonadmin_files() {
 		'setup.php',
 		'components/customizer/css-handler.php',
 		'components/customizer/helpers.php',
-//		'functions/formatting.php',
+// 'functions/formatting.php',
 		'functions/load-assets.php',
 		'functions/helper-functions.php',
-//		'functions/markup.php',
-//		'structure/archive.php',
+// 'functions/markup.php',
+// 'structure/archive.php',
 		'structure/comments.php',
 		'structure/footer.php',
-//		'structure/header.php',
+// 'structure/header.php',
 		'structure/menu.php',
 		'structure/post.php',
-//		'structure/sidebar.php',
+// 'structure/sidebar.php',
 		'woocommerce/woocommerce-setup.php',
 		'woocommerce/woocommerce-output.php',
-		'woocommerce/woocommerce-notice.php'
+		'woocommerce/woocommerce-notice.php',
 
 	);
-	wst_load_specified_files($filenames);
+	wst_load_specified_files( $filenames );
 }
 /**
  * Load admin files.
@@ -46,27 +46,27 @@ function wst_load_nonadmin_files() {
  *
  * @return void
  */
-function wst_load_admin_files(){
+function wst_load_admin_files() {
 	$filenames = array(
 		'components/customizer/customizer.php',
 
 	);
-	wst_load_specified_files($filenames);
+	wst_load_specified_files( $filenames );
 }
 /**
  * Load each of the specified files.
  *
  * @since 1.0.0
  *
- * @param array $filenames
- * @param string $folder_root
+ * @param array  $filenames the name files.
+ * @param string $folder_root the folder.
  *
  * @return void
  */
-function wst_load_specified_files (array $filenames, $folder_root = ''){
+function wst_load_specified_files( array $filenames, $folder_root = '' ) {
 	$folder_root = $folder_root ? : CHILD_LIB;
 	foreach ( $filenames as $filename ) {
-		include ($folder_root . $filename);
+		include( $folder_root . $filename );
 	}
 }
 

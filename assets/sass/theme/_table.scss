@@ -4,6 +4,38 @@
 // ========================================================================
 
 
+$table-margin-vertical:                          $global-margin !default;
+
+$table-cell-padding-vertical:                    16px !default;
+$table-cell-padding-horizontal:                  12px !default;
+
+$table-header-cell-font-size:                    $global-small-font-size !default;
+$table-header-cell-font-weight:                  normal !default;
+$table-header-cell-color:                        $global-muted-color !default;
+
+$table-footer-font-size:                         $global-small-font-size !default;
+
+$table-caption-font-size:                        $global-small-font-size !default;
+$table-caption-color:                            $global-muted-color !default;
+
+$table-row-active-background:                    #ffd !default;
+
+$table-divider-border-width:                     $global-border-width !default;
+$table-divider-border:                           $global-border !default;
+
+$table-striped-row-background:                   $global-muted-background !default;
+
+$table-hover-row-background:                     $table-row-active-background !default;
+
+$table-small-cell-padding-vertical:              10px !default;
+$table-small-cell-padding-horizontal:            12px !default;
+
+$table-expand-min-width:                         300px !default;
+
+$table-striped-border-width:                     $global-border-width !default;
+$table-striped-border:                           $global-border !default;
+
+
 
 // @mixin hook-table-cell(){}
 

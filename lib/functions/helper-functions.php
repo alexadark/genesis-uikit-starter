@@ -1,9 +1,6 @@
 <?php
-//Helper functions
-
-//flexible widgets
-
-
+// Helper functions
+// flexible widgets
 /**
  * Get the widget count.
  *
@@ -38,7 +35,6 @@ function wst_widget_area_class( $id ) {
 
 	$class = '';
 
-
 	if ( 1 === $count ) {
 		$class .= ' uk-child-width-1-1';
 	} elseif ( 0 === $count % 3 ) {
@@ -47,12 +43,11 @@ function wst_widget_area_class( $id ) {
 		$class .= ' uk-child-width-1-4@m';
 	} elseif ( 1 === $count % 2 && 7 !== $count ) {
 		$class .= ' uk-child-width-1-2@m uneven';
-	} elseif (  0 === $count % 7 ) {
+	} elseif ( 0 === $count % 7 ) {
 		$class .= ' uk-child-width-1-3@m uneven';
 	} else {
 		$class .= ' uk-child-width-1-2@m';
 	}
-
 
 	return $class;
 

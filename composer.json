@@ -1,0 +1,21 @@
+{
+  "config": {
+
+      "secure=http": false
+
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org",
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/cmb2": "2.0.*"
+  },
+  "autoload": {
+    "files": [
+      "vendor/cmb2/init.php"
+    ]
+  }
+}

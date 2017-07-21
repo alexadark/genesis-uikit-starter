@@ -2,7 +2,6 @@
 /**
  * Sidebar (widgetized areas) HTML markup structure
  *
- *
  * @since       1.0.0
  * @author      alexaspalato
  * @link        https://alexandraspalato.com

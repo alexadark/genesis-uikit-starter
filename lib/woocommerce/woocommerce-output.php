@@ -10,7 +10,7 @@
  * @link    http://www.studiopress.com/
  */
 
-//add_filter( 'woocommerce_enqueue_styles', 'genesis_sample_woocommerce_styles' );
+// add_filter( 'woocommerce_enqueue_styles', 'genesis_sample_woocommerce_styles' );
 /**
  * Enqueue the theme's custom WooCommerce styles to the WooCommerce plugin.
  *
@@ -24,7 +24,7 @@ function genesis_sample_woocommerce_styles( $enqueue_styles ) {
 		'src'     => get_stylesheet_directory_uri() . '/lib/woocommerce/genesis-sample-woocommerce.css',
 		'deps'    => '',
 		'version' => CHILD_THEME_VERSION,
-		'media'   => 'screen'
+		'media'   => 'screen',
 	);
 
 	return $enqueue_styles;

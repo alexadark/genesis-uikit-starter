@@ -2,6 +2,17 @@
 // Component: Description list
 //
 // ========================================================================
+$description-list-term-color:                    $global-emphasis-color !default;
+$description-list-term-margin-top:               $global-margin !default;
+
+$description-list-divider-term-margin-top:       $global-margin !default;
+$description-list-divider-term-border-width:     $global-border-width !default;
+$description-list-divider-term-border:           $global-border !default;
+
+
+$description-list-term-font-size:                       $global-small-font-size !default;
+$description-list-term-font-weight:                     normal !default;
+$description-list-term-text-transform:                  uppercase !default;
 
 
 

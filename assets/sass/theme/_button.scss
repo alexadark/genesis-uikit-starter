@@ -7,24 +7,61 @@
 // Variables
 // ========================================================================
 
-$button-border-width: 2px;
+$button-border-width: 2px ;
 
 $button-line-height:                             $global-control-height - ($button-border-width * 2) !default;
 $button-small-line-height:                       $global-control-small-height - ($button-border-width * 2) !default;
-$button-large-line-height:                       $global-control-large-height - ($button-border-width * 2) !default;
+$button-large-line-height:                       $global-control-large-height !default;
 
-$button-font-size:                               $global-small-font-size !default;
-$button-large-font-size:                         $global-small-font-size !default;
+$button-font-size:                               $global-font-size !default;
+$button-small-font-size:                         $global-small-font-size !default;
+$button-large-font-size:                         $global-medium-font-size !default;
+
+$button-padding-horizontal:                      $global-gutter !default;
+$button-small-padding-horizontal:                $global-small-gutter !default;
+$button-large-padding-horizontal:                $global-medium-gutter !default;
 
 $button-default-background:                      transparent !default;
+$button-default-color:                           $global-color !default;
 $button-default-hover-background:                transparent !default;
-$button-default-active-background:               transparent !default;
+$button-default-hover-color:                     $global-color !default;
+$button-default-active-background:               darken($button-default-background, 10%) !default;
+$button-default-active-color:                    $global-emphasis-color !default;
 
-$button-disabled-background:                     transparent !default;
+$button-primary-background:                      $global-primary-background !default;
+$button-primary-color:                           $global-inverse-color !default;
+$button-primary-hover-background:                darken($button-primary-background, 5%) !default;
+$button-primary-hover-color:                     $global-inverse-color !default;
+$button-primary-active-background:               darken($button-primary-background, 10%) !default;
+$button-primary-active-color:                    $global-inverse-color !default;
 
-$button-text-color:                              $global-color!default;
-$button-text-hover-color:                        $global-color  ;
+$button-secondary-background:                    $global-secondary-background !default;
+$button-secondary-color:                         $global-inverse-color !default;
+$button-secondary-hover-background:              darken($button-secondary-background, 5%) !default;
+$button-secondary-hover-color:                   $global-inverse-color !default;
+$button-secondary-active-background:             darken($button-secondary-background, 10%) !default;
+$button-secondary-active-color:                  $global-inverse-color !default;
 
+$button-danger-background:                       $global-danger-background !default;
+$button-danger-color:                            $global-inverse-color !default;
+$button-danger-hover-background:                 darken($button-danger-background, 5%) !default;
+$button-danger-hover-color:                      $global-inverse-color !default;
+$button-danger-active-background:                darken($button-danger-background, 10%) !default;
+$button-danger-active-color:                     $global-inverse-color !default;
+
+$button-disabled-background:                     $global-muted-background !default;
+$button-disabled-color:                          $global-muted-color !default;
+
+$button-text-line-height:                        $global-line-height !default;
+$button-text-color:                              $global-muted-color !default;
+$button-text-hover-color:                        $global-color ;
+$button-text-disabled-color:                     $global-muted-color !default;
+
+$button-link-line-height:                        $global-line-height !default;
+$button-link-color:                              $global-link-color !default;
+$button-link-hover-color:                        $global-link-hover-color !default;
+$button-link-hover-text-decoration:              underline !default;
+$button-link-disabled-color:                     $global-muted-color !default;
 
 
 
