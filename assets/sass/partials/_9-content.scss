@@ -3,13 +3,28 @@
 
 /* ## Entries
 --------------------------------------------- */
+.home,.blog,.single-post {
+  .entry {
+    padding: 0;
+    .entry-title, .entry-header .entry-meta, .entry-content {
+      @include min-screen($tablet) {
+        padding: 0 60px;
+      }
+    }
+    * + h2{
+      margin-top: 0;
+    }
+    h2.entry-title{
+      padding-top: 48px;
+    }
+    .entry-footer {
+      @include min-screen($tablet) {
+        padding: 0 60px 50px;
+      }
+    }
 
-.entry {
-  @include min-screen($tablet) {
-    padding: 50px 60px;
+    margin-bottom: 40px;
   }
-
-  margin-bottom: 40px;
 }
 
 .content .entry {

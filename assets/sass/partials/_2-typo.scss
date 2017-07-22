@@ -6,7 +6,10 @@
 }
 
 .entry-title {
-  font-size: rem(36);
+  @include min-screen($mobile){
+    font-size: rem(36) 
+ }
+  font-size: rem(24);
 }
 
 

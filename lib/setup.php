@@ -125,10 +125,11 @@ function wst_add_theme_supports() {
 function wst_add_new_image_sizes() {
 	$config = array(
 		'featured-image' => array(
-			'width'  => 720,
+			'width'  => 840,
 			'height' => 400,
 			'crop'   => true,
 		),
+
 	);
 
 	foreach ( $config as $name => $args ) {

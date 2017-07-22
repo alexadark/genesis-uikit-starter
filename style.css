@@ -82,6 +82,13 @@ input[type="search"]::-webkit-search-results-button {
   float: right;
   margin-top: 12px; }
 
+.right.search input {
+  padding: 10px 15px;
+  margin-top: 8px;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  font-style: italic; }
+
 .entry-content .search-form,
 .site-header .search-form {
   width: 50%; }
@@ -9647,7 +9654,10 @@ img {
   font-size: 1.25rem; }
 
 .entry-title {
-  font-size: 2.25rem; }
+  font-size: 1.5rem; }
+  @media only screen and (min-width: 480px) {
+    .entry-title {
+      font-size: 2.25rem; } }
 
 .entry-title a:hover {
   color: #aa1145; }
@@ -10018,9 +10028,10 @@ img.alignright,
   width: 100%; }
 
 .site-title {
-  font-size: 1.5625rem;
-  font-weight: 700;
-  line-height: 1.2; }
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase; }
   @media only screen and (max-width: 1024px) {
     .site-title {
       text-align: center; } }
@@ -10434,11 +10445,19 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 /* ## Entries
 --------------------------------------------- */
-.entry {
+.home .entry, .blog .entry, .single-post .entry {
+  padding: 0;
   margin-bottom: 40px; }
   @media only screen and (min-width: 768px) {
-    .entry {
-      padding: 50px 60px; } }
+    .home .entry .entry-title, .home .entry .entry-header .entry-meta, .home .entry .entry-content, .blog .entry .entry-title, .blog .entry .entry-header .entry-meta, .blog .entry .entry-content, .single-post .entry .entry-title, .single-post .entry .entry-header .entry-meta, .single-post .entry .entry-content {
+      padding: 0 60px; } }
+  .home .entry * + h2, .blog .entry * + h2, .single-post .entry * + h2 {
+    margin-top: 0; }
+  .home .entry h2.entry-title, .blog .entry h2.entry-title, .single-post .entry h2.entry-title {
+    padding-top: 48px; }
+  @media only screen and (min-width: 768px) {
+    .home .entry .entry-footer, .blog .entry .entry-footer, .single-post .entry .entry-footer {
+      padding: 0 60px 50px; } }
 
 .content .entry {
   background-color: #fff; }

@@ -154,6 +154,17 @@ input[type="search"]::-webkit-search-results-button {
 .site-header .search-form {
   float: right;
   margin-top: 12px;
+
+}
+.right.search{
+  input{
+    padding: 10px 15px;
+    margin-top: 8px;
+    font-size: rem(8);
+    text-transform: uppercase;
+    font-style: italic;
+
+  }
 }
 
 .entry-content .search-form,
