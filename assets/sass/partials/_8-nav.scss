@@ -61,7 +61,7 @@
 
 .genesis-nav-menu .sub-menu a {
   position: relative;
-  width: 200px;
+  width: 150px;
   padding: 15px;
   border: 1px solid $global-border;
   border-top: none;
@@ -73,6 +73,23 @@
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -43px 0 0 199px;
   border-top: 1px solid $global-border;
+}
+
+.genesis-nav-menu .megamenu .sub-menu {
+  background-color: #fff; /* same color as .genesis-nav-menu .sub-menu a */
+  border: 1px solid #eee; /* optional */
+  height: auto;
+  width: 710px; /* make width needed plus 10px */
+}
+
+.genesis-nav-menu .megamenu.move .sub-menu {
+  right: 0;
+} /* optional to right align the sub-menu */
+
+.genesis-nav-menu .megamenu .sub-menu a {
+  border: 0; /* optional */
+  width: 200px; /* 1/3 width for 3 columns */
+  /* width: 300px; /* 1/2 width for 2 columns */
 }
 
 .genesis-nav-menu .menu-item:hover {

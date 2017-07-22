@@ -10,11 +10,13 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
+ * @see        https://docs.woocommerce.com/document/template-structure/
+ * @author        WooThemes
+ * @package    WooCommerce/Templates
  * @version     2.0.0
  */
 ?>
-    <ul class="products uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m"
-        uk-grid>
+<ul class="products  <?php if ( ! is_cart() ) { ?> uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m <?php } ?>"
+	<?php if ( ! is_cart() ) {
+		echo 'uk-grid';
+	} ?>>

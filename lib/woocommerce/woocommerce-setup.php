@@ -169,7 +169,7 @@ add_filter( 'genesis_site_layout', 'wst_wc_single_fw' );
  * @return string
  */
 function wst_wc_single_fw() {
-	if ( 'product' == get_post_type() && is_single() || is_cart() ) {
+	if ( 'product' == get_post_type() && is_single() || is_cart() || is_checkout() ) {
 		return 'full-width-content';
 	}
 }
@@ -183,7 +183,7 @@ add_action( 'woocommerce_before_single_product_summary', 'wst_open_grid_single_p
  * @return void
  */
 function wst_open_grid_single_product() {
-	echo '<div class="product-wrapper" uk-grid>';
+	echo '<div class="product-wrapper uk-grid-large" uk-grid>';
 
 }
 

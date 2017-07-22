@@ -19,7 +19,6 @@ add_filter( 'wp_nav_menu_args', 'genesis_sample_secondary_menu_args' );
  *
  * @param array $args
  *
- * @return array
  */
 function genesis_sample_secondary_menu_args( array $args ) {
 
@@ -28,6 +27,20 @@ function genesis_sample_secondary_menu_args( array $args ) {
 	}
 
 	$args['depth'] = 1;
+
+	return $args;
+
+}
+
+// Reduce the primary navigation menu to two levels depth.
+//add_filter( 'wp_nav_menu_args', 'genesis_sample_primary_menu_args' );
+function genesis_sample_primary_menu_args( $args ) {
+
+	if ( 'primary' != $args['theme_location'] ) {
+		return $args;
+	}
+
+	$args['depth'] = 2;
 
 	return $args;
 

@@ -6,7 +6,7 @@
 @import 'woocommerce/animation';
 @import 'woocommerce/fonts';
 
-@import "woocommerce/woocommerce";
+//@import "woocommerce/woocommerce";
 .woocommerce {
   .content {
     background: $global-background;
@@ -15,6 +15,12 @@
     @include min-screen($tablet) {
       padding: 40px;
     }
+  }
+  ul.products{
+    margin-left: 0;
+  }
+  li.product{
+    list-style-type: none;
   }
 }
 
@@ -247,7 +253,7 @@ p.stars {
   @extend .pagination;
   .current {
     background: $primary-color;
-    padding: 10px 12px;
+    padding: 9px 12px 12px;
     color: $white;
 
   }
@@ -485,16 +491,32 @@ p.stars a{
  * Cart/checkout page
  */
 .woocommerce table.shop_table {
-  border: 1px solid rgba(0,0,0,.1);
+  border: 1px solid $global-border;
   margin: 0 -1px 24px 0;
   text-align: left;
   width: 100%;
   border-collapse: separate;
-  border-radius: 5px;
+  border-radius:0;
   td{
-    padding: 15px;
+    padding: 0 15px;
+    [data-title="Subtotal"]{
+      padding: 0 !important;
+    }
+  }
+  th{
+    font-weight: 700;
+    padding: 9px 12px;
+    text-transform: uppercase;
+    font-size:rem(13);
+    letter-spacing:1px;
   }
 }
+
+.woocommerce-Price-amount.amount{
+  position: relative;
+  top: 5px;
+}
+
 
 
 .woocommerce-cart,
@@ -516,21 +538,25 @@ p.stars a{
 
     }
 
-    td.actions .coupon .input-text {
+    td.actions{
+      padding: 20px;
+    .coupon .input-text {
       float: left;
       box-sizing: border-box;
-      border: 1px solid darken( $secondary, 10% );
-      padding: 6px 6px 5px;
-      margin: 0 4px 0 0;
+      border: 1px solid $global-border;
+      padding: 0 15px;
+      margin: 0 15px 15px 0;
       outline: 0;
-      line-height: 1;
+      line-height: 3.2;
       width: 300px;
+      text-transform: uppercase;
+      font-size:12px;
     }
+  }
 
     input {
-      margin: 0;
-      //vertical-align: middle;
-      //line-height: 1;
+      margin: 0 15px 0 0;
+      width: auto;
     }
   }
 
@@ -539,11 +565,13 @@ p.stars a{
     padding: 1em 0;
 
     a.checkout-button {
-      display: block;
+//       display: block;
       text-align: center;
       margin-bottom: 1em;
-      font-size: 1.25em;
-      padding: 1em;
+//       font-size: 1.25em;
+//       padding: 1em;
+width:auto;
+
     }
   }
 
@@ -570,6 +598,7 @@ p.stars a{
         border-collapse: separate;
         margin: 0 0 6px;
         padding: 0;
+      
 
         tr:first-child {
           th,
@@ -647,8 +676,9 @@ p.stars a{
   }
 
   #payment {
-    background: $secondary;
-    border-radius: 5px;
+    background: $light;
+    border-radius: 0;
+    padding: 40px;
 
     ul.payment_methods {
       @include clearfix();
@@ -663,6 +693,7 @@ p.stars a{
         text-align: left;
         margin: 0;
         font-weight: normal;
+        list-style-type: none;
 
         input {
           margin: 0 1em 0 0;
@@ -826,8 +857,9 @@ p.stars a{
 }
 
 .product-remove a{
-  color: $accent-color;
-  font-size:20px;
+  color: $global-color;
+  font-size:40px;
+  font-weight:100;
 }
 .product-name a{
   color:$global-color;
@@ -842,12 +874,118 @@ p.stars a{
 .coupon{
   input[name="apply_coupon"]{
     float: left;
+    width: auto;
   }
 
 }
 
 .woocommerce #content table.cart td.actions .coupon label, .woocommerce table.cart td.actions .coupon label, .woocommerce-page #content table.cart td.actions .coupon label, .woocommerce-page table.cart td.actions .coupon label {
   display: none;
+}
+
+
+p.cart {
+  margin-bottom: 2em;
+  @include clearfix();
+}
+
+form.cart {
+  margin-bottom: 2em;
+  @include clearfix();
+
+  div.quantity {
+    float: left;
+    margin: 0 4px 0 0;
+  }
+
+  table {
+    border-width: 0 0 1px;
+
+    td {
+      padding-left: 0;
+    }
+
+    div.quantity {
+      float: none;
+      margin: 0;
+    }
+
+    small.stock {
+      display: block;
+      float: none;
+    }
+  }
+
+  .variations {
+    margin-bottom: 1em;
+    border: 0;
+    width: 100%;
+
+    td,
+    th {
+      border: 0;
+      vertical-align: top;
+      line-height: 2em;
+    }
+
+    label {
+      font-weight: 700;
+    }
+
+    select {
+      max-width: 100%;
+      min-width: 75%;
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    td.label {
+      padding-right: 1em;
+    }
+  }
+
+  .woocommerce-variation-description p {
+    margin-bottom: 1em;
+  }
+
+  .reset_variations {
+    visibility: hidden;
+    font-size: 0.83em;
+  }
+
+  .wc-no-matching-variations {
+    display: none;
+  }
+
+  .button {
+    vertical-align: middle;
+    float: left;
+  }
+
+  .group_table {
+    td.label {
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+
+    td {
+      vertical-align: top;
+      padding-bottom: 0.5em;
+      border: 0;
+    }
+
+    td:first-child {
+      width: 4em;
+      text-align: center;
+    }
+
+    .wc-grouped-product-add-to-cart-checkbox {
+      display: inline-block;
+      width: auto;
+      margin: 0 auto;
+      transform:scale(1.5, 1.5);
+    }
+  }
 }
 
 
