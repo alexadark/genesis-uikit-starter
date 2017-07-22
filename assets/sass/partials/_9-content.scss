@@ -14,7 +14,7 @@
     * + h2{
       margin-top: 0;
     }
-    h2.entry-title{
+   .entry-title{
       padding-top: 48px;
     }
     .entry-footer {
@@ -29,6 +29,9 @@
 
 .content .entry {
   background-color: $white;
+  .home &,.blog &,.single-post & {
+    box-shadow: $global-medium-box-shadow;
+  }
 }
 
 .entry-content ol,

@@ -10453,7 +10453,7 @@ img.alignright,
       padding: 0 60px; } }
   .home .entry * + h2, .blog .entry * + h2, .single-post .entry * + h2 {
     margin-top: 0; }
-  .home .entry h2.entry-title, .blog .entry h2.entry-title, .single-post .entry h2.entry-title {
+  .home .entry .entry-title, .blog .entry .entry-title, .single-post .entry .entry-title {
     padding-top: 48px; }
   @media only screen and (min-width: 768px) {
     .home .entry .entry-footer, .blog .entry .entry-footer, .single-post .entry .entry-footer {
@@ -10461,6 +10461,8 @@ img.alignright,
 
 .content .entry {
   background-color: #fff; }
+  .home .content .entry, .blog .content .entry, .single-post .content .entry {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
 
 .entry-content ol,
 .entry-content ul {
@@ -10597,7 +10599,8 @@ li.comment {
 /* # Sidebars
 ---------------------------------------------------------------------------------------------------- */
 .sidebar {
-  font-size: 16px; }
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
 
 .sidebar li {
   margin-bottom: 10px;
@@ -10609,7 +10612,6 @@ li.comment {
   margin-bottom: 0; }
 
 .sidebar .widget {
-  margin-bottom: 40px;
   background-color: #fff; }
   @media only screen and (min-width: 768px) {
     .sidebar .widget {
